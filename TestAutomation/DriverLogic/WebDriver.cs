@@ -4,13 +4,16 @@ using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using System;
 
-namespace TestAutomation.Driver
+
+//нужно чтобы ожидания более явно задавались, чтобы их не приходилось искать
+//драйвер должен быть приватным (чтобы его никто не мог использовать), драйвер в обертке не катит
+namespace TestAutomation.DriverLogic
 {
     public class WebDriver : WebDriverSettings
     {
         private EventFiringWebDriver driver;
         private WebDriverLogger logger;
-        private WebDriverDelays delays;
+        private WebDriverTimeouts delays;
         public WebDriverLogger Logger
         {
             set
@@ -23,7 +26,7 @@ namespace TestAutomation.Driver
                 driver.ElementValueChanged += new EventHandler<WebElementValueEventArgs>(logger.elementValueChanged);
             }
         }
-        public WebDriverDelays Delays
+        public WebDriverTimeouts Delays
         {
             set
             {
@@ -38,7 +41,7 @@ namespace TestAutomation.Driver
         }
         public WebDriver()
         {
-            driver = new EventFiringWebDriver(new ChromeDriver(Path, Options));
+            driver = new EventFiringWebDriver(new ChromeDriver(path, options));
             wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(0));
         }
         public void Dispose()

@@ -1,8 +1,7 @@
 ﻿using OpenQA.Selenium;
-using TestAutomation.Driver;
-using System;
+using TestAutomation.WebElements;
 
-namespace TestAutomation.Pages
+namespace TestAutomation.NUnitTests
 {
     public class PageLogin : Page
     {

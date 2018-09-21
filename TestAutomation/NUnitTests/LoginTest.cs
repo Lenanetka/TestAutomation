@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using TestAutomation.Pages;
+using TestAutomation.WebElements;
 
 namespace TestAutomation.NUnitTests
 {

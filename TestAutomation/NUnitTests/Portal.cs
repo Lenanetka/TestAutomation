@@ -1,6 +1,4 @@
-﻿using TestAutomation.Driver;
-
-namespace TestAutomation.Pages
+﻿namespace TestAutomation.NUnitTests
 {
     public static class Portal
     {

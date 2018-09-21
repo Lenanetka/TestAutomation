@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace TestAutomation.Driver
+namespace TestAutomation.DriverLogic
 {
     public class WebDriverLoggerTxt : WebDriverLogger
     {

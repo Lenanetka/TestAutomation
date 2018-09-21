@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium.Support.Events;
 
-namespace TestAutomation.Driver
+namespace TestAutomation.DriverLogic
 {
     public abstract class WebDriverLogger
     {

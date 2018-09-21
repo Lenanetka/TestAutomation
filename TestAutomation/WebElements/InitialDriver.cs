@@ -1,8 +1,7 @@
-﻿using OpenQA.Selenium;
-using TestAutomation.Driver;
+﻿using TestAutomation.DriverLogic;
 using System;
 
-namespace TestAutomation.Pages
+namespace TestAutomation.WebElements
 {
     static class InitialDriver
     {
@@ -14,12 +13,11 @@ namespace TestAutomation.Pages
             {
                 lock (thisLock)
                 {
-                    //Прочитала, что нужно двойную проверку на всякий случай делать, вдруг 2 потока одновременно до этого убедились, что driver=null и встали в очередь
                     if (driver == null)
                     {
                         driver = new WebDriver();
                         driver.Logger = new WebDriverLoggerTxt(System.Environment.CurrentDirectory + @"/log.txt");
-                        driver.Delays = new WebDriverDelays();
+                        driver.Delays = new WebDriverTimeoutsStandart();
                     }
                 }
             }

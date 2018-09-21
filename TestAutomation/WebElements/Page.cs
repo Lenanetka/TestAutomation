@@ -1,13 +1,10 @@
-﻿using OpenQA.Selenium;
-using TestAutomation.Driver;
-using System;
+﻿using TestAutomation.DriverLogic;
 
-namespace TestAutomation.Pages
+namespace TestAutomation.WebElements
 {
-    public abstract class Page
+    public abstract class Page: Element
     {
         protected string container;
-        protected WebDriver driver = InitialDriver.getInstance();
         protected string pageThis;
         public string url
         {

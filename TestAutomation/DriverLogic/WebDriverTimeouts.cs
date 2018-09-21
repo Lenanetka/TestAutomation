@@ -1,19 +1,15 @@
 ﻿using OpenQA.Selenium.Support.Events;
 
-namespace TestAutomation.Driver
+namespace TestAutomation.DriverLogic
 {
-    public class WebDriverDelays
+    public abstract class WebDriverTimeouts
     {
-        public WebDriverDelays()
-        {
-
-        }
         private System.TimeSpan current;
-        protected System.TimeSpan TimeOutFinding = System.TimeSpan.FromSeconds(3);
-        protected System.TimeSpan TimeOutClicking = System.TimeSpan.FromSeconds(3);
-        protected System.TimeSpan TimeOutValueChanging = System.TimeSpan.FromSeconds(3);
-        protected System.TimeSpan TimeOutPageLoading = System.TimeSpan.FromSeconds(5);
-        protected System.TimeSpan TimeOutScriptExecuting = System.TimeSpan.FromSeconds(5);
+        protected System.TimeSpan TIME_OUT_FINDING;
+        protected System.TimeSpan TIME_OUT_CLICKING;
+        protected System.TimeSpan TIME_OUT_VALUE_CHANGING;
+        protected System.TimeSpan TIME_OUT_PAGE_LOADING;
+        protected System.TimeSpan TIME_OUT_SCRIPT_EXECUTING;
 
         public delegate void OnTimeoutChanged(System.TimeSpan timeout);
         public event OnTimeoutChanged TimeoutChangedEvent;
@@ -28,23 +24,23 @@ namespace TestAutomation.Driver
         }
         public void elementClicking(object sender, WebElementEventArgs e)
         {
-            setNewTimeout(TimeOutClicking);
+            setNewTimeout(TIME_OUT_CLICKING);
         }
         public void elementFinding(object sender, FindElementEventArgs e)
         {
-            setNewTimeout(TimeOutFinding);
+            setNewTimeout(TIME_OUT_FINDING);
         }
         public void elementValueChanging(object sender, WebElementEventArgs e)
         {
-            setNewTimeout(TimeOutValueChanging);
+            setNewTimeout(TIME_OUT_VALUE_CHANGING);
         }
         public void navigating(object sender, WebDriverNavigationEventArgs e)
         {
-            setNewTimeout(TimeOutPageLoading);
+            setNewTimeout(TIME_OUT_PAGE_LOADING);
         }
         public void scriptExecuting(object sender, WebDriverScriptEventArgs e)
         {
-            setNewTimeout(TimeOutScriptExecuting);
+            setNewTimeout(TIME_OUT_SCRIPT_EXECUTING);
         }
     }
 }
