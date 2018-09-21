@@ -1,0 +1,15 @@
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\TestAutomation.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\TestAutomation.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\nunit.framework.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\WebDriver.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\WebDriver.Support.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\nunit.framework.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\nunit.framework.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\WebDriver.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\WebDriver.Support.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\obj\Debug\TestAutomation.csprojAssemblyReference.cache
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\obj\Debug\TestAutomation.csproj.CoreCompileInputs.cache
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\obj\Debug\TestAutomation.csproj.CopyComplete
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\obj\Debug\TestAutomation.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\obj\Debug\TestAutomation.pdb
