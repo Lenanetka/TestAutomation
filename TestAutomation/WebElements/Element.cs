@@ -2,8 +2,24 @@
 
 namespace TestAutomation.WebElements
 {
-    public abstract class Element
+    class Element
     {
-        protected WebDriver driver = InitialDriver.getInstance();
+        private IWebDriverElement element;
+        public Element()
+        {
+
+        }
+        public void byId(string id)
+        {
+            //element = new 
+        }
+        public void byClass(string className)
+        {
+
+        }
+        public void byXPath(string xPath)
+        {
+
+        }
     }
 }
