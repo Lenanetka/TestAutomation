@@ -1,7 +1,7 @@
-﻿namespace TestAutomation.DriverLogic
+﻿namespace TestAutomation.WebElements
 {
-    public interface IWebDriverElement
-    {      
+    public interface IElement
+    {       
         bool isVisible(string xPath);
         bool isClickable(string xPath);
         bool exists(string xPath);

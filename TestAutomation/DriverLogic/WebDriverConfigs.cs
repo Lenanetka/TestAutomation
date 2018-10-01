@@ -30,6 +30,11 @@ namespace TestAutomation.DriverLogic
             timeouts.TIME_OUT_PAGE_LOADING = getTimeout(data, "TIME_OUT_PAGE_LOADING");
             timeouts.TIME_OUT_SCRIPT_EXECUTING = getTimeout(data, "TIME_OUT_SCRIPT_EXECUTING");          
         }
+        public string getDriverPath()
+        {
+            if (VERSION != null && VERSION != "") return PATH + VERSION + @"\";
+            return PATH;
+        }
         private System.TimeSpan getTimeout(IniData data, string key)
         {
             return System.TimeSpan.FromSeconds(int.Parse(data["Timeouts"][key]));

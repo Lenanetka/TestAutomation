@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TestAutomation.DriverLogic;
 
 namespace TestAutomation.WebElements
 {
     public abstract class PageMap
     {
-        protected Browser browser;
+        protected IBrowser browser;
         public PageMap()
         {
-            browser = new Browser(); 
+            //browser = new InitialDriver.Setup(); 
         }        
     }
 }

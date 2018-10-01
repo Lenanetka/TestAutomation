@@ -62,16 +62,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverLogic\IWebDriverWindow.cs" />
+    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumEdgeDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumFirefoxDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumInternetExplorerDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumOperaDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\SeleniumWebBrowser.cs" />
+    <Compile Include="DriverLogic\Selenium\SeleniumWebElement.cs" />
+    <Compile Include="WebElements\IBrowser.cs" />
     <Compile Include="DriverLogic\Selenium\Browsers\SeleniumChromeDriver.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebDriverOptions.cs" />
-    <Compile Include="DriverLogic\IWebDriverElement.cs" />
-    <Compile Include="DriverLogic\IWebDriverManager.cs" />
+    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumWebDriverOptions.cs" />
+    <Compile Include="WebElements\IElement.cs" />
     <Compile Include="DriverLogic\Selenium\SeleniumWebDriverListener.cs" />
     <Compile Include="DriverLogic\WebDriverConfigs.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebDriverManager.cs" />
+    <Compile Include="DriverLogic\Selenium\SeleniumWebDriver.cs" />
     <Compile Include="DriverLogic\WebDriverTimeouts.cs" />
-    <Compile Include="NUnitTests\PageMaps\LoginPageMap.cs" />
+    <Compile Include="PageMaps\LoginPageMap.cs" />
     <Compile Include="Report\ILogger.cs" />
     <Compile Include="Report\Report.cs" />
     <Compile Include="Report\ReportPdf.cs" />
@@ -81,8 +86,6 @@
     <Compile Include="NUnitTests\LoginTest.cs" />
     <Compile Include="NUnitTests\PortalTest.cs" />
     <Compile Include="Report\Screen.cs" />
-    <Compile Include="WebElements\Browser.cs" />
-    <Compile Include="WebElements\Element.cs" />
     <Compile Include="DriverLogic\InitialDriver.cs" />
     <Compile Include="NUnitTests\PageLogin.cs" />
     <Compile Include="NUnitTests\Portal.cs" />

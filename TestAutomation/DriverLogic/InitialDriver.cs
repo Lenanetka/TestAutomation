@@ -1,17 +1,18 @@
 ﻿using TestAutomation.DriverLogic.Selenium;
-using TestAutomation.DriverLogic;
+using TestAutomation.DriverLogic.Selenium.Browsers;
+using TestAutomation.WebElements;
 using TestAutomation.Report;
 using System;
 
-namespace TestAutomation.WebElements
+namespace TestAutomation.DriverLogic
 {
     class InitialDriver
     {
         [ThreadStatic]
-        private static SeleniumWebDriverManager driver;
+        private static SeleniumWebDriver driver;
         private WebDriverConfigs config;
         private static Object thisLock = new Object();
-        public static SeleniumWebDriverManager getInstance()
+        public static IBrowser getInstance()
         {
             if (driver == null)
             {
@@ -19,36 +20,27 @@ namespace TestAutomation.WebElements
                 {
                     if (driver == null)
                     {
-                        driver = new SeleniumWebDriverManager("config.ini");
-                        driver.setup();
+                        WebDriverConfigs configs = new WebDriverConfigs("config.ini");
                         //driver.Logger = new ReportPdf(System.Environment.CurrentDirectory + @"/log.pdf");
-                        public void setup()
+                        switch (configs.DRIVER)
                         {
-                            string path = config.PATH;
-                            if (config.VERSION != null && config.VERSION != "") path += config.VERSION + @"\";
-                            switch (config.DRIVER)
-                            {
-                                case "CHROME":
-                                    driver = new EventFiringWebDriver(new ChromeDriver(path, SeleniumWebDriverOptions.chromeOptions(config)));
-                                    break;
-                                case "FIREFOX":
-                                    driver = new EventFiringWebDriver(new FirefoxDriver(path, SeleniumWebDriverOptions.firefoxOptions(config)));
-                                    break;
-                                case "OPERA":
-                                    driver = new EventFiringWebDriver(new OperaDriver(path, SeleniumWebDriverOptions.operaOptions(config)));
-                                    break;
-                                case "IE":
-                                    {
-                                        driver = new EventFiringWebDriver(new InternetExplorerDriver(path, SeleniumWebDriverOptions.internetExplorerOptions(config)));
-                                        if (config.START_MAXIMIZED == true) driver.Manage().Window.Maximize();
-                                        break;
-                                    }
-                                case "Edge":
-                                    driver = new EventFiringWebDriver(new EdgeDriver(path, SeleniumWebDriverOptions.edgeOptions(config)));
-                                    if (config.START_MAXIMIZED == true) driver.Manage().Window.Maximize();
-                                    break;
-                            }
+                            case "CHROME":
+                                driver = new SeleniumChromeDriver(configs);
+                                break;
+                            case "FIREFOX":
+                                driver = new SeleniumFirefoxDriver(configs);
+                                break;
+                            case "OPERA":
+                                driver = new SeleniumOperaDriver(configs);
+                                break;
+                            case "IE":
+                                driver = new SeleniumInternetExplorerDriver(configs);
+                                break;
+                            case "Edge":
+                                driver = new SeleniumEdgeDriver(configs);
+                                break;
                         }
+                        return driver;
                     }
                 }
             }

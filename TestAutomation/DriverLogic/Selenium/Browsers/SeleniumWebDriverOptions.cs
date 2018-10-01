@@ -4,7 +4,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Opera;
 
-namespace TestAutomation.DriverLogic.Selenium
+namespace TestAutomation.DriverLogic.Selenium.Browsers
 {
     static class SeleniumWebDriverOptions
     {
