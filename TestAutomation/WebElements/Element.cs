@@ -2,7 +2,7 @@
 
 namespace TestAutomation.WebElements
 {
-    class Element
+    public class Element
     {
         private IWebDriverElement element;
         public Element()
