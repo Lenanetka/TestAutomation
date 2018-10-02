@@ -62,15 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverLogic\Selenium\WebDriverManager.cs" />
-    <Compile Include="DriverLogic\Selenium\Elements\WebBrowser.cs" />
-    <Compile Include="DriverLogic\Selenium\WebDriverOptions.cs" />
-    <Compile Include="DriverLogic\Selenium\Elements\WebElement.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\Field.cs" />
+    <Compile Include="DriverLogic\Selenium\Initialize\WebDriverManager.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\Browser.cs" />
+    <Compile Include="DriverLogic\Selenium\Initialize\WebDriverOptions.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\Element.cs" />
     <Compile Include="WebElements\IBrowser.cs" />
     <Compile Include="WebElements\IElement.cs" />
     <Compile Include="DriverLogic\Selenium\WebDriverListener.cs" />
     <Compile Include="DriverLogic\WebDriverConfigs.cs" />
-    <Compile Include="DriverLogic\Selenium\WebDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriverBase.cs" />
     <Compile Include="DriverLogic\WebDriverTimeouts.cs" />
     <Compile Include="PageMaps\LoginPageMap.cs" />
     <Compile Include="Report\ILogger.cs" />
@@ -82,7 +83,7 @@
     <Compile Include="NUnitTests\LoginTest.cs" />
     <Compile Include="NUnitTests\PortalTest.cs" />
     <Compile Include="Report\Screen.cs" />
-    <Compile Include="DriverLogic\Selenium\InitialDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\Initialize\InitialDriver.cs" />
     <Compile Include="NUnitTests\PageLogin.cs" />
     <Compile Include="NUnitTests\Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,39 +1,38 @@
 ﻿using OpenQA.Selenium.Support.Events;
 using System;
 
-namespace TestAutomation.DriverLogic.Selenium
+namespace TestAutomation.DriverLogic.Selenium.Initialize
 {
-    class InitialDriver
+    class InitialDriver: WebDriverManager
     {
         [ThreadStatic]
         private static EventFiringWebDriver driver;
-        private static Object thisLock = new Object();
-        public static EventFiringWebDriver getInstance()
+        private static Object thisLock = new Object();       
+        public EventFiringWebDriver getInstance(WebDriverConfigs configs)
         {
+            this.configs = configs;
             if (driver == null)
             {
                 lock (thisLock)
                 {
                     if (driver == null)
                     {
-                        WebDriverConfigs configs = new WebDriverConfigs("config.ini");
-                        //driver.Logger = new ReportPdf(System.Environment.CurrentDirectory + @"/log.pdf");
                         switch (configs.DRIVER)
                         {
                             case "CHROME":
-                                driver = WebDriverManager.chrome(configs);
+                                driver = chromeDriver();
                                 break;
                             case "FIREFOX":
-                                driver = WebDriverManager.firefox(configs);
+                                driver = firefoxDriver();
                                 break;
                             case "OPERA":
-                                driver = WebDriverManager.opera(configs);
+                                driver = operaDriver();
                                 break;
                             case "IE":
-                                driver = WebDriverManager.internetExplorer(configs);
+                                driver = internetExplorerDriver();
                                 break;
                             case "Edge":
-                                driver = WebDriverManager.edge(configs);
+                                driver = edgeDriver();
                                 break;
                         }
                         return driver;

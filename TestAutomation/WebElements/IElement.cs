@@ -1,10 +1,13 @@
 ﻿namespace TestAutomation.WebElements
 {
     public interface IElement
-    {       
-        bool isVisible(string xPath);
-        bool isClickable(string xPath);
-        bool exists(string xPath);
-        void click(string xPath);
+    {
+        void byId(string id);
+        void byClassName(string className);
+        void byXPath(string xPath);
+        bool isVisible();
+        bool isClickable();
+        bool exists();
+        void click();
     }
 }

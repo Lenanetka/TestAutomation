@@ -7,10 +7,6 @@ namespace TestAutomation.DriverLogic.Selenium
     {              
         protected WebDriverTimeouts timeouts;
         public WebDriverWait wait;
-        public WebDriverWaiter(WebDriverConfigs configs)
-        {
-            this.timeouts = configs.timeouts;
-        }
         private System.TimeSpan current;       
         private void setNewTimeout(System.TimeSpan timeout)
         {

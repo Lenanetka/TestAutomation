@@ -7,25 +7,15 @@ using TestAutomation.WebElements;
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class WebBrowser : WebDriver, IBrowser
+    public class Browser : WebDriverBase, IBrowser
     {
-        public WebBrowser()
+        public Browser() : base()
         {
 
         }
-        public IElement getElementById(string id)
+        public IElement getElement()
         {
-            throw new NotImplementedException();
-        }
-
-        public IElement getElementByClass(string className)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IElement getElementByXPath(string xPath)
-        {
-            throw new NotImplementedException();
+            return new Element();
         }
 
         public string getCurrentUrl()
