@@ -2,7 +2,7 @@
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public class SeleniumWebDriverListener
+    public abstract class WebDriverListener
     {
         public virtual void throwExeption(object sender, WebDriverExceptionEventArgs e) { }
         public virtual void elementClicking(object sender, WebElementEventArgs e) { }

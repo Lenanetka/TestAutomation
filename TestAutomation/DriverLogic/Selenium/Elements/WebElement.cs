@@ -5,11 +5,11 @@ using System;
 using TestAutomation.WebElements;
 
 
-namespace TestAutomation.DriverLogic.Selenium
+namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class SeleniumWebElement : IElement
+    public class WebElement : WebDriver, IElement
     {        
-        public SeleniumWebElement()
+        public WebElement()
         {
             
         }
@@ -53,6 +53,26 @@ namespace TestAutomation.DriverLogic.Selenium
         {
             IWebElement element = getElement(ExpectedConditions.ElementIsVisible, locator);
             return element.Text;
+        }
+
+        public bool isVisible(string xPath)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isClickable(string xPath)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool exists(string xPath)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void click(string xPath)
+        {
+            throw new NotImplementedException();
         }
     }
 }

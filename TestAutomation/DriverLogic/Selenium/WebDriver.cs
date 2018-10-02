@@ -1,17 +1,14 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.Events;
+﻿using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using System;
-using TestAutomation.WebElements;
-
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public abstract class SeleniumWebDriver: SeleniumWebDriverWaiter
+    public abstract class WebDriver: WebDriverWaiter
     {
         [ThreadStatic]
         protected static EventFiringWebDriver driver;
-        public void registerListener(SeleniumWebDriverListener listener)
+        public void registerListener(WebDriverListener listener)
         {
             driver.ElementClicking += listener.elementClicking;
             driver.ElementClicked += listener.elementClicked;
@@ -29,9 +26,10 @@ namespace TestAutomation.DriverLogic.Selenium
             driver.ScriptExecuted += listener.scriptExecuted;
             driver.ExceptionThrown += listener.throwExeption;
         }
-        public SeleniumWebDriver(WebDriverConfigs configs) : base(configs)
+        public WebDriver(WebDriverConfigs configs) : base(configs)
         {
-            wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(0));           
+            driver = InitialDriver.getInstance();
+            wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(0));             
         }        
         public void dispose()
         {

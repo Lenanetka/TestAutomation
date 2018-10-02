@@ -5,11 +5,11 @@ using System;
 using TestAutomation.WebElements;
 
 
-namespace TestAutomation.DriverLogic.Selenium
+namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class SeleniumWebBrowser : IBrowser
+    public class WebBrowser : WebDriver, IBrowser
     {
-        public SeleniumWebBrowser()
+        public WebBrowser()
         {
 
         }

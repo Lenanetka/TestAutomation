@@ -62,35 +62,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumEdgeDriver.cs" />
-    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumFirefoxDriver.cs" />
-    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumInternetExplorerDriver.cs" />
-    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumOperaDriver.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebBrowser.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebElement.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriverManager.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\WebBrowser.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriverOptions.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\WebElement.cs" />
     <Compile Include="WebElements\IBrowser.cs" />
-    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumChromeDriver.cs" />
-    <Compile Include="DriverLogic\Selenium\Browsers\SeleniumWebDriverOptions.cs" />
     <Compile Include="WebElements\IElement.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebDriverListener.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriverListener.cs" />
     <Compile Include="DriverLogic\WebDriverConfigs.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriver.cs" />
     <Compile Include="DriverLogic\WebDriverTimeouts.cs" />
     <Compile Include="PageMaps\LoginPageMap.cs" />
     <Compile Include="Report\ILogger.cs" />
     <Compile Include="Report\Report.cs" />
     <Compile Include="Report\ReportPdf.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebDriverLogger.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriverLogger.cs" />
     <Compile Include="Report\ReportTxt.cs" />
-    <Compile Include="DriverLogic\Selenium\SeleniumWebDriverWaiter.cs" />
+    <Compile Include="DriverLogic\Selenium\WebDriverWaiter.cs" />
     <Compile Include="NUnitTests\LoginTest.cs" />
     <Compile Include="NUnitTests\PortalTest.cs" />
     <Compile Include="Report\Screen.cs" />
-    <Compile Include="DriverLogic\InitialDriver.cs" />
+    <Compile Include="DriverLogic\Selenium\InitialDriver.cs" />
     <Compile Include="NUnitTests\PageLogin.cs" />
     <Compile Include="NUnitTests\Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebElements\PageMap.cs" />
+    <Compile Include="PageMaps\PageMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

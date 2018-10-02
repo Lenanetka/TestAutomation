@@ -3,9 +3,8 @@ using TestAutomation.Report;
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public class SeleniumWebDriverLogger: SeleniumWebDriverListener, ILogger
+    public class WebDriverLogger: WebDriverListener, ILogger
     {      
-
         public void log(bool positive, string action, string message)
         {
 

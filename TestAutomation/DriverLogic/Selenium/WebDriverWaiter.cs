@@ -1,14 +1,13 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium.Support.Events;
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public abstract class SeleniumWebDriverWaiter: SeleniumWebDriverListener
+    public abstract class WebDriverWaiter: WebDriverListener
     {              
         protected WebDriverTimeouts timeouts;
         public WebDriverWait wait;
-        public SeleniumWebDriverWaiter(WebDriverConfigs configs)
+        public WebDriverWaiter(WebDriverConfigs configs)
         {
             this.timeouts = configs.timeouts;
         }

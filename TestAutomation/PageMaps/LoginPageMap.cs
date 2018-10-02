@@ -1,4 +1,4 @@
-﻿TestAutomation.DriverLogic;
+﻿using TestAutomation.WebElements;
 
 namespace TestAutomation.PageMaps
 {
@@ -8,7 +8,7 @@ namespace TestAutomation.PageMaps
         {
             get
             {
-                return browser.getElement().byId("1");
+                return browser.getElementById("1");
             }
         }
     }

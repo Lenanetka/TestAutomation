@@ -1,6 +1,6 @@
-﻿using TestAutomation.DriverLogic;
+﻿using TestAutomation.WebElements;
 
-namespace TestAutomation.WebElements
+namespace TestAutomation.PageMaps
 {
     public abstract class PageMap
     {

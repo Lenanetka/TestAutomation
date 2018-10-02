@@ -1,18 +1,14 @@
-﻿using TestAutomation.DriverLogic.Selenium;
-using TestAutomation.DriverLogic.Selenium.Browsers;
-using TestAutomation.WebElements;
-using TestAutomation.Report;
+﻿using OpenQA.Selenium.Support.Events;
 using System;
 
-namespace TestAutomation.DriverLogic
+namespace TestAutomation.DriverLogic.Selenium
 {
     class InitialDriver
     {
         [ThreadStatic]
-        private static SeleniumWebDriver driver;
-        private WebDriverConfigs config;
+        private static EventFiringWebDriver driver;
         private static Object thisLock = new Object();
-        public static IBrowser getInstance()
+        public static EventFiringWebDriver getInstance()
         {
             if (driver == null)
             {
@@ -25,19 +21,19 @@ namespace TestAutomation.DriverLogic
                         switch (configs.DRIVER)
                         {
                             case "CHROME":
-                                driver = new SeleniumChromeDriver(configs);
+                                driver = WebDriverManager.chrome(configs);
                                 break;
                             case "FIREFOX":
-                                driver = new SeleniumFirefoxDriver(configs);
+                                driver = WebDriverManager.firefox(configs);
                                 break;
                             case "OPERA":
-                                driver = new SeleniumOperaDriver(configs);
+                                driver = WebDriverManager.opera(configs);
                                 break;
                             case "IE":
-                                driver = new SeleniumInternetExplorerDriver(configs);
+                                driver = WebDriverManager.internetExplorer(configs);
                                 break;
                             case "Edge":
-                                driver = new SeleniumEdgeDriver(configs);
+                                driver = WebDriverManager.edge(configs);
                                 break;
                         }
                         return driver;
