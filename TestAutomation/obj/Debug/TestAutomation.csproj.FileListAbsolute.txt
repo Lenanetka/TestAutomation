@@ -40,3 +40,17 @@ d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug
 d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\WebDriver.xml
 d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\WebDriver.Support.xml
 d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\obj\Debug\TestAutomation.csproj.CopyComplete
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\nunit.engine.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\nunit.engine.api.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\Mono.Cecil.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\TestAutomation.dll.config
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\DoddleReport.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\DoddleReport.iTextSharp.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\INIFileParser.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\itextsharp.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\DoddleReport.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\DoddleReport.iTextSharp.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\INIFileParser.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\itextsharp.xml

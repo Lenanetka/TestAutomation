@@ -1,10 +1,8 @@
 ﻿using OpenQA.Selenium;
-using System;
-using TestAutomation.WebElements;
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class Element : WebDriverBase, IElement
+    public class Element : WebDriverBase
     {
         protected By locator;
         public Element(By locator) : base()
@@ -25,18 +23,20 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         public bool isVisible()
         {
             IWebElement element = getElement(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible);
-            return true;
+            return element.Displayed;
         }
 
         public bool isClickable()
         {
             IWebElement element = getElement(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable);
-            return true;
+            return element.Enabled;
         }
 
         public bool exists()
         {
-            throw new NotImplementedException();
+            IWebElement element = getElement(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists);
+            if(element != null) return true;
+            return false;
         }
         public void click()
         {

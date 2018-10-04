@@ -4,10 +4,18 @@ using TestAutomation.DriverLogic.Selenium.Initialize;
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public abstract class WebDriverBase: WebDriverWaiter
+    public abstract class WebDriverBase
     {
-        protected EventFiringWebDriver driver;
-        public void registerListener(WebDriverListener listener)
+        protected EventFiringWebDriver driver;      
+        protected WebDriverWaiter waiter;
+        protected WebDriverWait wait
+        {
+            get
+            {
+                return waiter.wait;
+            }
+        }
+        public void registerListener(IWebDriverListener listener)
         {
             driver.ElementClicking += listener.elementClicking;
             driver.ElementClicked += listener.elementClicked;
@@ -27,15 +35,9 @@ namespace TestAutomation.DriverLogic.Selenium
         }
         public WebDriverBase()
         {
-            WebDriverConfigs configs = new WebDriverConfigs("configs.ini");
-            this.timeouts = configs.timeouts;
-            driver = new InitialDriver().getInstance(configs);
-            wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(0));             
+            driver = new InitialDriver().getInstance();
+            waiter = new WebDriverWaiter(driver, InitialDriver.configs.timeouts);
+            registerListener(waiter);
         }        
-        public void dispose()
-        {
-            driver.Quit();
-            driver = null;
-        }
     }
 }

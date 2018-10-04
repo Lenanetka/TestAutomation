@@ -1,13 +1,13 @@
-﻿using TestAutomation.WebElements;
+﻿using TestAutomation.DriverLogic.Selenium.Elements;
 
 namespace TestAutomation.PageMaps
 {
     public abstract class PageMap
     {
-        public IBrowser browser;
+        public Browser browser;
         public PageMap()
         {
-            browser = new TestAutomation.DriverLogic.Selenium.Elements.Browser(); 
+            browser = new TestAutomation.DriverLogic.InitialBrowser().getInstance();             
         }        
     }
 }

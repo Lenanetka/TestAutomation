@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
-using TestAutomation.WebElements;
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class Field : Element, IField
+    public class Field : Element
     {
         public Field(By locator) : base(locator)
         {

@@ -1,28 +1,32 @@
-﻿using TestAutomation.WebElements;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    class FieldGetter : IFieldGetter
+    class FieldGetter
     {
-        public IField byClassName(string className)
+        public Field byClassName(string className)
         {
             return new Field(By.ClassName(className));
         }
 
-        public IField byName(string name)
+        public Field byName(string name)
         {
             return new Field(By.Name(name));
         }
 
-        public IField byXPath(string xPath)
+        public Field byXPath(string xPath)
         {
             return new Field(By.XPath(xPath));
         }
 
-        public IField byId(string id)
+        public Field byId(string id)
         {
             return new Field(By.Id(id));
+        }
+
+        public Field byCssSelector(string cssSelector)
+        {
+            return new Field(By.CssSelector(cssSelector));
         }
     }
 }

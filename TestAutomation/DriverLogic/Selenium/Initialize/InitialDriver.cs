@@ -5,18 +5,17 @@ namespace TestAutomation.DriverLogic.Selenium.Initialize
 {
     class InitialDriver: WebDriverManager
     {
-        [ThreadStatic]
         private static EventFiringWebDriver driver;
         private static Object thisLock = new Object();       
-        public EventFiringWebDriver getInstance(WebDriverConfigs configs)
-        {
-            this.configs = configs;
+        public EventFiringWebDriver getInstance()
+        {           
             if (driver == null)
-            {
+            {                
                 lock (thisLock)
-                {
+                {                    
                     if (driver == null)
                     {
+                        configs = new WebDriverConfigs(Environment.CurrentDirectory + @"\configs.ini");
                         switch (configs.DRIVER)
                         {
                             case "CHROME":

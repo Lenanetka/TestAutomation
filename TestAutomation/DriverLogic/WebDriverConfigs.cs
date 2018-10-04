@@ -24,6 +24,7 @@ namespace TestAutomation.DriverLogic
             START_MAXIMIZED = getBrowserOptions(data, "START_MAXIMIZED");
             IGNORE_CERTIFICATE_ERRORS = getBrowserOptions(data, "IGNORE_CERTIFICATE_ERRORS");
 
+            timeouts = new WebDriverTimeouts();
             timeouts.TIME_OUT_FINDING = getTimeout(data,"TIME_OUT_FINDING");
             timeouts.TIME_OUT_CLICKING = getTimeout(data, "TIME_OUT_CLICKING");
             timeouts.TIME_OUT_VALUE_CHANGING = getTimeout(data, "TIME_OUT_VALUE_CHANGING");
@@ -37,7 +38,7 @@ namespace TestAutomation.DriverLogic
         }
         private System.TimeSpan getTimeout(IniData data, string key)
         {
-            return System.TimeSpan.FromSeconds(int.Parse(data["Timeouts"][key]));
+            return System.TimeSpan.FromSeconds(double.Parse(data["Timeouts"][key]));
         }
         private string getBrowser(IniData data, string key)
         {

@@ -1,28 +1,32 @@
-﻿using TestAutomation.WebElements;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    class ElementGetter : IElementGetter
+    class ElementGetter
     {
-        public IElement byClassName(string className)
+        public Element byClassName(string className)
         {
             return new Element(By.ClassName(className));
         }
 
-        public IElement byName(string name)
+        public Element byName(string name)
         {
             return new Element(By.Name(name));
         }
 
-        public IElement byXPath(string xPath)
+        public Element byXPath(string xPath)
         {
             return new Element(By.XPath(xPath));
         }
 
-        public IElement byId(string id)
+        public Element byId(string id)
         {
             return new Element(By.Id(id));
+        }
+    
+        public Element byCssSelector(string cssSelector)
+        {
+            return new Element(By.CssSelector(cssSelector));
         }
     }
 }

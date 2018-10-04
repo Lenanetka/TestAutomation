@@ -2,24 +2,23 @@
 using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using System;
-using TestAutomation.WebElements;
 
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class Browser : WebDriverBase, IBrowser
+    public class Browser : WebDriverBase
     {
         public Browser() : base()
         {
 
         }
-        public IElementGetter getElement()
+        public ElementGetter getElement()
         {
             return new ElementGetter();
         }
-        public IFieldGetter getField()
+        public FieldGetter getField()
         {
-            return new Field();
+            return new FieldGetter();
         }
         public string getCurrentUrl()
         {

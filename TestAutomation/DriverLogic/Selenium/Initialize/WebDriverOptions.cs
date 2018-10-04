@@ -8,7 +8,7 @@ namespace TestAutomation.DriverLogic.Selenium.Initialize
 {
     abstract class WebDriverOptions
     {
-        protected WebDriverConfigs configs;
+        public static WebDriverConfigs configs { get; protected set; }
         protected ChromeOptions chromeOptions()
         {
             ChromeOptions options = new ChromeOptions();
@@ -35,7 +35,7 @@ namespace TestAutomation.DriverLogic.Selenium.Initialize
             InternetExplorerOptions options = new InternetExplorerOptions();
             return options;
         }
-        protected EdgeOptions edgeOptions(WebDriverConfigs configs)
+        protected EdgeOptions edgeOptions()
         {
             EdgeOptions options = new EdgeOptions();
             return options;

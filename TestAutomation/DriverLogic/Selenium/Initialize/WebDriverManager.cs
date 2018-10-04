@@ -11,28 +11,28 @@ namespace TestAutomation.DriverLogic.Selenium.Initialize
     {
         protected EventFiringWebDriver chromeDriver()
         {
-            EventFiringWebDriver driver = new EventFiringWebDriver(new ChromeDriver(configs.getDriverPath(), chromeOptions(configs)));
+            EventFiringWebDriver driver = new EventFiringWebDriver(new ChromeDriver(configs.getDriverPath(), chromeOptions()));
             return driver;
         }
         protected EventFiringWebDriver firefoxDriver()
         {
-            EventFiringWebDriver driver = new EventFiringWebDriver(new FirefoxDriver(configs.getDriverPath(), firefoxOptions(configs)));
+            EventFiringWebDriver driver = new EventFiringWebDriver(new FirefoxDriver(configs.getDriverPath(), firefoxOptions()));
             return driver;
         }
         protected EventFiringWebDriver operaDriver()
         {
-            EventFiringWebDriver driver = new EventFiringWebDriver(new OperaDriver(configs.getDriverPath(), operaOptions(configs)));
+            EventFiringWebDriver driver = new EventFiringWebDriver(new OperaDriver(configs.getDriverPath(), operaOptions()));
             return driver;
         }
         protected EventFiringWebDriver edgeDriver()
         {
-            EventFiringWebDriver driver = new EventFiringWebDriver(new EdgeDriver(configs.getDriverPath(), edgeOptions(configs)));
+            EventFiringWebDriver driver = new EventFiringWebDriver(new EdgeDriver(configs.getDriverPath(), edgeOptions()));
             if (configs.START_MAXIMIZED == true) driver.Manage().Window.Maximize();
             return driver;
         }
         protected EventFiringWebDriver internetExplorerDriver()
         {
-            EventFiringWebDriver driver = new EventFiringWebDriver(new InternetExplorerDriver(configs.getDriverPath(), internetExplorerOptions(configs)));
+            EventFiringWebDriver driver = new EventFiringWebDriver(new InternetExplorerDriver(configs.getDriverPath(), internetExplorerOptions()));
             if (configs.START_MAXIMIZED == true) driver.Manage().Window.Maximize();
             return driver;
         }
