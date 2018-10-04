@@ -1,27 +1,28 @@
 ﻿using NUnit.Framework;
 using TestAutomation.WebElements;
+using TestAutomation.PageMaps;
 
 namespace TestAutomation.NUnitTests
 {
     [TestFixture]
-    class LoginTest : PortalTest<PageLogin>
+    class LoginTest
     {
-        [OneTimeSetUp]
-        public void oneTimeSetUp()
+        private LoginPageMap map;
+        [SetUp]
+        public void setUp()
         {
-            page = new PageLogin(container);
+            map.browser.navigate(map.url);
         }
         [Test]
         public void SignIn_ValidData_SignedIn()
         {
-            bool result = page.signIn_Successfull("admin", "@Nd3rsen!");
-            Assert.AreEqual(true, result);
-        }
-        [Test]
-        public void SignIn_EmptyEmail_ErrorMessage()
-        {
-            string result = page.signIn_EmailValidationError(" ", "@Nd3rsen!");
-            Assert.AreEqual("Email cannot be blank.", result);
+            map.LoginButton.click();
+            map.LoginField.input("AutotestUser");
+            map.PasswordField.input("AutotestUser123");
+            map.SubmitButton.click();
+            map.UserAvatarButton.click();
+            map.LogoutButton.click();
+            Assert.AreEqual("https://yandex.by/", map.browser.getCurrentUrl());
         }
     }
 }

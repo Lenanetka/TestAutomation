@@ -2,7 +2,8 @@
 {
     public interface IBrowser
     {
-        IElement getElement();
+        IElementGetter getElement();
+        IFieldGetter getField();
         string getCurrentUrl();
         void navigate(string url);
         void refresh();

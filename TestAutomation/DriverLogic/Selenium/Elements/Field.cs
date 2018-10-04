@@ -1,12 +1,11 @@
 ﻿using OpenQA.Selenium;
-using System;
 using TestAutomation.WebElements;
 
 namespace TestAutomation.DriverLogic.Selenium.Elements
 {
-    public class Field : Element
+    public class Field : Element, IField
     {
-        public Field() : base()
+        public Field(By locator) : base(locator)
         {
         }
         public void input(string input)

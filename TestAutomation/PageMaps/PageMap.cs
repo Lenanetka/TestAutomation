@@ -4,10 +4,10 @@ namespace TestAutomation.PageMaps
 {
     public abstract class PageMap
     {
-        protected IBrowser browser;
+        public IBrowser browser;
         public PageMap()
         {
-            //browser = new InitialDriver.Setup(); 
+            browser = new TestAutomation.DriverLogic.Selenium.Elements.Browser(); 
         }        
     }
 }

@@ -7,20 +7,9 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
     public class Element : WebDriverBase, IElement
     {
         protected By locator;
-        public Element() : base()
+        public Element(By locator) : base()
         {
-        }
-        public void byId(string id)
-        {
-            this.locator = By.Id(id);
-        }
-        public void byClassName(string className)
-        {
-            this.locator = By.ClassName(className);
-        }
-        public void byXPath(string xPath)
-        {
-            this.locator = By.XPath(xPath);
+            this.locator = locator;
         }
         protected delegate System.Func<IWebDriver, IWebElement> ExpectedConditionsFunc(By locator);
         protected IWebElement getElement(ExpectedConditionsFunc func)
