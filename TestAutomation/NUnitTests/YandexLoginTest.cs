@@ -4,7 +4,7 @@ using TestAutomation.PageMaps;
 namespace TestAutomation.NUnitTests
 {
     [TestFixture]
-    class LoginLogoutTest : TestBase
+    class YandexLoginTest : TestBase
     {
         private YandexMailPage page;
         [OneTimeSetUp]
