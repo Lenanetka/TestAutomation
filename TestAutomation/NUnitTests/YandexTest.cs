@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using TestAutomation.PageMaps;
+using TestAutomation.PageMaps.Yandex;
 
 namespace TestAutomation.NUnitTests
 {

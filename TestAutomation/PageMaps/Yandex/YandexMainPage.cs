@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using TestAutomation.DriverLogic.Selenium.Elements;
 
-namespace TestAutomation.PageMaps
+namespace TestAutomation.PageMaps.Yandex
 {
     public class YandexMainPage : PageMap
     {

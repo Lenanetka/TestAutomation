@@ -5,7 +5,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Opera;
 using OpenQA.Selenium.Support.Events;
 
-namespace TestAutomation.DriverLogic.Selenium.Initialize
+namespace TestAutomation.DriverLogic.Selenium
 {
     abstract class WebDriverManager: WebDriverOptions
     {
