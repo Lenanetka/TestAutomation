@@ -72,7 +72,8 @@
     <Compile Include="DriverLogic\Selenium\WebDriverOptions.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Element.cs" />
     <Compile Include="NUnitTests\TestBase.cs" />
-    <Compile Include="NUnitTests\YandexTest.cs" />
+    <Compile Include="NUnitTests\YandexPullOfTests1.cs" />
+    <Compile Include="NUnitTests\YandexPullOfTests2.cs" />
     <Compile Include="PageMaps\Yandex\YandexMainPage.cs" />
     <Compile Include="PageMaps\Yandex\YandexMailPage.cs" />
     <Compile Include="Report\InitialReport.cs" />

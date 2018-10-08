@@ -1,11 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using DoddleReport;
-using DoddleReport.Writers;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using TestAutomation.DriverLogic;
+﻿using System.IO;
 
 namespace TestAutomation.Report
 {
