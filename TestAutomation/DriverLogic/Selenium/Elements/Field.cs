@@ -16,10 +16,6 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         public void clear(By locator)
         {
             waitUntilIsClickable(locator).Clear();
-        }
-        public string getText(By locator)
-        {
-            return waitUntilIsClickable(locator).Text;
-        }
+        }       
     }
 }

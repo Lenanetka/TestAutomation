@@ -3,7 +3,7 @@ using TestAutomation.Report;
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public class WebDriverLogger: Logger, IWebDriverListener
+    public class Logger: Report.Logger, IListener
     {
         public void throwExeption(object sender, WebDriverExceptionEventArgs e)
         {

@@ -1,35 +1,30 @@
-﻿using TestAutomation.DriverLogic.Selenium.Elements;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using TestAutomation.DriverLogic.Selenium.Elements;
 
 namespace TestAutomation.PageMaps
 {
     public class YandexMailPage : PageMap
     {
-        public static string url = "mail.yandex.by";
+        public static string url = "https://mail.yandex.by/";
         private string userButtonXPath = "/html/body/div[2]/div[4]/div/div[2]/div[4]/div[7]";
-        private string logoutButtonXPath = "//*[@id='nb-7']/div/div/div[7]";
-        public void logout()
-        {
-            new YandexLoginPage().login("AutotestUser", "AutotestUser123");
-            UserButton.click();
-            LogoutButton.click();
-        }
+        private string userDropdownXPath = "//div[@class='_nb-popup-content']";
+        private string userDropDownListCSSSelector = ".b-user-dropdown-content.b-user-dropdown-content-with-exit";
+        private string userNameClass = "mail-User-Name";
         public YandexMailPage() : base()
         {
 
         }
-        private Element UserButton
+        public void logout()
         {
-            get
-            {
-                return browser.getElement().byXPath(userButtonXPath);
-            }
+            new Button().click(By.XPath(userButtonXPath));
+            Assert.IsTrue(new ElementProperties().isDisplayed(By.XPath(userDropdownXPath)));
+            new Button().click(new Element().getElementFromList(By.CssSelector(userDropDownListCSSSelector), 7));
+            Assert.IsTrue(browser.getCurrentUrl().Contains(YandexMainPage.url));
         }
-        private Element LogoutButton
+        public void userNameIs(string name)
         {
-            get
-            {
-                return browser.getElement().byXPath(logoutButtonXPath);
-            }
+            Assert.AreEqual(name, new ElementProperties().getText(By.ClassName(userNameClass)));
         }
     }
 }

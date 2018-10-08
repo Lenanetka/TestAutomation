@@ -4,10 +4,10 @@ using TestAutomation.DriverLogic.Selenium.Initialize;
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public abstract class WebDriverBase
+    public abstract class Base
     {
         protected EventFiringWebDriver driver;      
-        protected WebDriverWaiter waiter;
+        protected Waiter waiter;
         protected WebDriverWait wait
         {
             get
@@ -15,7 +15,7 @@ namespace TestAutomation.DriverLogic.Selenium
                 return waiter.wait;
             }
         }
-        public void registerListener(IWebDriverListener listener)
+        public void registerListener(IListener listener)
         {
             driver.ElementClicking += listener.elementClicking;
             driver.ElementClicked += listener.elementClicked;
@@ -33,10 +33,10 @@ namespace TestAutomation.DriverLogic.Selenium
             driver.ScriptExecuted += listener.scriptExecuted;
             driver.ExceptionThrown += listener.throwExeption;
         }
-        public WebDriverBase()
+        public Base()
         {
             driver = new InitialDriver().getInstance();
-            waiter = new WebDriverWaiter(driver, InitialDriver.configs.timeouts);
+            waiter = new Waiter(driver, InitialDriver.configs.timeouts);
             registerListener(waiter);
         }        
     }

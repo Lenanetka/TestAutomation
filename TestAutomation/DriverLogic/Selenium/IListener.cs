@@ -2,7 +2,7 @@
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public interface IWebDriverListener
+    public interface IListener
     {
         void throwExeption(object sender, WebDriverExceptionEventArgs e);
         void elementClicking(object sender, WebElementEventArgs e);

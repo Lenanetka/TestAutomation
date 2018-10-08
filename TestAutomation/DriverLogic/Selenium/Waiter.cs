@@ -4,14 +4,15 @@ using OpenQA.Selenium.Support.UI;
 
 namespace TestAutomation.DriverLogic.Selenium
 {
-    public class WebDriverWaiter: IWebDriverListener
+    public class Waiter: IListener
     {              
-        private WebDriverTimeouts timeouts;
+        private Timeouts timeouts;
         public WebDriverWait wait;
         private System.TimeSpan current; 
-        public WebDriverWaiter(EventFiringWebDriver driver, WebDriverTimeouts timeouts)
+        public Waiter(EventFiringWebDriver driver, Timeouts timeouts)
         {
             wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(0));
+            wait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(StaleElementReferenceException));
             wait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
             this.timeouts = timeouts;
         }

@@ -62,28 +62,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DriverLogic\Selenium\Elements\Button.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\ElementProperties.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Field.cs" />
-    <Compile Include="DriverLogic\InitialBrowser.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\JSExecuter.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\Mouse.cs" />
     <Compile Include="DriverLogic\Selenium\Initialize\WebDriverManager.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Browser.cs" />
     <Compile Include="DriverLogic\Selenium\Initialize\WebDriverOptions.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Element.cs" />
     <Compile Include="NUnitTests\TestBase.cs" />
     <Compile Include="NUnitTests\TestLogger.cs" />
+    <Compile Include="NUnitTests\YandexTest.cs" />
     <Compile Include="PageMaps\YandexMainPage.cs" />
     <Compile Include="PageMaps\YandexMailPage.cs" />
     <Compile Include="Report\InitialReport.cs" />
-    <Compile Include="DriverLogic\Selenium\IWebDriverListener.cs" />
-    <Compile Include="DriverLogic\WebDriverConfigs.cs" />
-    <Compile Include="DriverLogic\Selenium\WebDriverBase.cs" />
-    <Compile Include="DriverLogic\WebDriverTimeouts.cs" />
+    <Compile Include="DriverLogic\Selenium\IListener.cs" />
+    <Compile Include="DriverLogic\Configs.cs" />
+    <Compile Include="DriverLogic\Selenium\Base.cs" />
+    <Compile Include="DriverLogic\Timeouts.cs" />
     <Compile Include="PageMaps\YandexLoginPage.cs" />
     <Compile Include="Report\Logger.cs" />
     <Compile Include="Report\Report.cs" />
     <Compile Include="Report\ReportHTML.cs" />
-    <Compile Include="DriverLogic\Selenium\WebDriverLogger.cs" />
-    <Compile Include="DriverLogic\Selenium\WebDriverWaiter.cs" />
-    <Compile Include="NUnitTests\LoginLogoutTest.cs" />
+    <Compile Include="DriverLogic\Selenium\Logger.cs" />
+    <Compile Include="DriverLogic\Selenium\Waiter.cs" />
     <Compile Include="DriverLogic\Selenium\Initialize\InitialDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PageMaps\PageMap.cs" />

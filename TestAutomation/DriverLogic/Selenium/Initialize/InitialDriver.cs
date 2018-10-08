@@ -15,7 +15,7 @@ namespace TestAutomation.DriverLogic.Selenium.Initialize
                 {                    
                     if (driver == null)
                     {
-                        configs = new WebDriverConfigs(Environment.CurrentDirectory + @"\configs.ini");
+                        configs = new Configs(Environment.CurrentDirectory + @"\configs.ini");
                         switch (configs.DRIVER)
                         {
                             case "CHROME":

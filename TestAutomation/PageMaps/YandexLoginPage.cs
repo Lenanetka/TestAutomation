@@ -1,4 +1,6 @@
 ﻿using TestAutomation.DriverLogic.Selenium.Elements;
+using OpenQA.Selenium;
+using NUnit.Framework;
 
 namespace TestAutomation.PageMaps
 {
@@ -15,31 +17,10 @@ namespace TestAutomation.PageMaps
         public void login(string login, string password)
         {
             new YandexMainPage().goToLoginPage();
-            LoginField.input("AutotestUser");
-            PasswordField.input("AutotestUser123");
-            SubmitLoginButton.click();
-        }      
-        private Field LoginField
-        {
-            get
-            {
-                return browser.getField().byName(loginFieldName);
-            }
-        }
-        private Field PasswordField
-        {
-            get
-            {
-                return browser.getField().byName(passwordFieldName);
-            }
-        }
-        private Element SubmitLoginButton
-        {
-            get
-            {
-                return browser.getElement().byXPath(submitLoginButtonXPath);
-            }
-        }
-        
+            new Field().input(By.Name(loginFieldName), login);
+            new Field().input(By.Name(passwordFieldName), password);
+            new Button().click(By.XPath(submitLoginButtonXPath));
+            Assert.IsTrue(browser.getCurrentUrl().Contains(YandexMailPage.url));
+        }                
     }
 }

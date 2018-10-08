@@ -3,16 +3,16 @@ using IniParser.Model;
 
 namespace TestAutomation.DriverLogic
 {
-    public class WebDriverConfigs
+    public class Configs
     {
         public string DRIVER;
         public string VERSION;
         public string PATH;
         public bool START_MAXIMIZED;
         public bool IGNORE_CERTIFICATE_ERRORS;
-        public WebDriverTimeouts timeouts;
+        public Timeouts timeouts;
         
-        public WebDriverConfigs(string path)
+        public Configs(string path)
         {
             var parser = new FileIniDataParser();
             IniData data = parser.ReadFile(path);
@@ -24,7 +24,7 @@ namespace TestAutomation.DriverLogic
             START_MAXIMIZED = getBrowserOptions(data, "START_MAXIMIZED");
             IGNORE_CERTIFICATE_ERRORS = getBrowserOptions(data, "IGNORE_CERTIFICATE_ERRORS");
 
-            timeouts = new WebDriverTimeouts();
+            timeouts = new Timeouts();
             timeouts.TIME_OUT_FINDING = getTimeout(data,"TIME_OUT_FINDING");
             timeouts.TIME_OUT_CLICKING = getTimeout(data, "TIME_OUT_CLICKING");
             timeouts.TIME_OUT_VALUE_CHANGING = getTimeout(data, "TIME_OUT_VALUE_CHANGING");
