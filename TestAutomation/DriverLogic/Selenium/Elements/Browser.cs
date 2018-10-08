@@ -12,14 +12,6 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         {
 
         }
-        public ElementGetter getElement()
-        {
-            return new ElementGetter();
-        }
-        public FieldGetter getField()
-        {
-            return new FieldGetter();
-        }
         public string getCurrentUrl()
         {
             return driver.Url;

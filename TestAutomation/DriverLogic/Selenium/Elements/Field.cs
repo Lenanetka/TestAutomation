@@ -4,23 +4,22 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
 {
     public class Field : Element
     {
-        public Field(By locator) : base(locator)
+        public Field() : base()
         {
         }
-        public void input(string input)
+        public void input(By locator, string input)
         {
-            IWebElement element = getElement(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists);
+            IWebElement element = waitUntilIsClickable(locator);
+            element.Clear();
             element.SendKeys(input);
         }
-        public void clear()
+        public void clear(By locator)
         {
-            IWebElement element = getElement(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists);
-            element.Clear();
+            waitUntilIsClickable(locator).Clear();
         }
-        public string text()
+        public string getText(By locator)
         {
-            IWebElement element = getElement(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible);
-            return element.Text;
+            return waitUntilIsClickable(locator).Text;
         }
     }
 }

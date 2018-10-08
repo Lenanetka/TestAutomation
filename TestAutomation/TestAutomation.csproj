@@ -62,9 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverLogic\Selenium\Elements\ElementGetter.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Field.cs" />
-    <Compile Include="DriverLogic\Selenium\Elements\FieldGetter.cs" />
     <Compile Include="DriverLogic\InitialBrowser.cs" />
     <Compile Include="DriverLogic\Selenium\Initialize\WebDriverManager.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Browser.cs" />
