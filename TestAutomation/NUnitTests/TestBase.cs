@@ -1,12 +1,21 @@
 ﻿using NUnit.Framework;
-using TestAutomation.PageMaps;
 using NUnit.Framework.Interfaces;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
 
 namespace TestAutomation.NUnitTests
 {
     [TestFixture]
+    [AllureNUnit]
+    [AllureParentSuite("All tests")]
     abstract class TestBase
     {
+        [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            AllureLifecycle.Instance.CleanupResultDirectory();
+        }
         [TearDown]
         protected void tearDown()
         {

@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium.Support.Events;
-using TestAutomation.Report;
 
 namespace TestAutomation.DriverLogic.Selenium.Listeners
 {

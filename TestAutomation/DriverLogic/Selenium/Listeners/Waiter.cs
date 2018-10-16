@@ -12,8 +12,7 @@ namespace TestAutomation.DriverLogic.Selenium.Listeners
         public Waiter(EventFiringWebDriver driver, Timeouts timeouts)
         {
             wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(0));
-            wait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(StaleElementReferenceException));
-            wait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
+            wait.IgnoreExceptionTypes(typeof(StaleElementReferenceException), typeof(NoSuchElementException));
             this.timeouts = timeouts;
         }
         private void setNewTimeout(System.TimeSpan timeout)

@@ -12,15 +12,13 @@ namespace TestAutomation.DriverLogic.Selenium
         {
             get
             {
-                return waiter.wait;
+                return InitialDriver.wait;
             }
         }
         public Base()
         {
             var initializer = new InitialDriver();
             driver = initializer.getInstance();
-            waiter = new Waiter(driver, InitialDriver.configs.timeouts);
-            initializer.registerListener(waiter);
         }        
     }
 }

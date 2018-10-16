@@ -8,7 +8,7 @@ namespace TestAutomation.DriverLogic.Selenium
 {
     abstract class WebDriverOptions
     {
-        public static Configs configs { get; protected set; }
+        protected static Configs configs;
         protected ChromeOptions chromeOptions()
         {
             ChromeOptions options = new ChromeOptions();

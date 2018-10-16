@@ -1,0 +1,44 @@
+{
+  "uuid": "47fc5077-3453-4282-8f1d-a0a5e16ee72f-tc-0-1007",
+  "name": "TestAutomation.NUnitTests.YandexPullOfTests2.AddItemToComparisonList",
+  "children": [
+    "b64de3ee-caf9-485c-b562-dbb5506abb90-tr-0-1008"
+  ],
+  "befores": [
+    {
+      "name": "OneTimeSetup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1539670989392,
+      "stop": 1539670989392
+    }
+  ],
+  "afters": [
+    {
+      "name": "tearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1539670989393,
+      "stop": 1539670989393
+    }
+  ],
+  "links": [],
+  "start": 1539670936827,
+  "stop": 1539670989579
+}

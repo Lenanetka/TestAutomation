@@ -8,6 +8,10 @@ namespace TestAutomation.PageMaps
         public PageMap()
         {
             browser = new Browser();   
-        }       
+        }  
+        public void closeBrowser()
+        {
+            browser.close();
+        }
     }
 }

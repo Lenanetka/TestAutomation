@@ -12,7 +12,7 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
             return waitUntilIsClickable(locator).GetAttribute(attributeName);
         }
 
-        protected bool isPresent(By locator)
+        public bool isPresent(By locator)
         {
             try
             {
@@ -20,6 +20,10 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
                 return true;
             }
             catch (NoSuchElementException ex)
+            {
+                return false;
+            }
+            catch (WebDriverTimeoutException ex)
             {
                 return false;
             }
@@ -40,6 +44,11 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         public string getText(By locator)
         {
             return waitUntilIsVisible(locator).Text;
+        }
+        public int getListOfChildrenCount(By locator)
+        {
+            waitUntilIsVisible(locator);
+            return driver.FindElements(locator).Count;
         }
     }
 }

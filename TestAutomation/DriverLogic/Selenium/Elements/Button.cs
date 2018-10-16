@@ -9,6 +9,7 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         }
         public void click(By locator)
         {
+
             waitUntilIsClickable(locator).Click();
         }
         public void click(IWebElement element)

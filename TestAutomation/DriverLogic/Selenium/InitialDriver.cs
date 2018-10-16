@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.IO;
 using TestAutomation.DriverLogic.Selenium.Listeners;
 
 namespace TestAutomation.DriverLogic.Selenium
@@ -9,6 +10,15 @@ namespace TestAutomation.DriverLogic.Selenium
     {
         private static EventFiringWebDriver driver;
         private static Object thisLock = new Object();
+        private static Waiter waiter;
+        public static WebDriverWait wait
+        {
+            get
+            {
+                if (waiter == null) return null;
+                return waiter.wait;
+            }
+        }
         public EventFiringWebDriver getInstance()
         {           
             if (driver == null)
@@ -17,7 +27,7 @@ namespace TestAutomation.DriverLogic.Selenium
                 {                    
                     if (driver == null)
                     {
-                        configs = new Configs(Environment.CurrentDirectory + @"\configs.ini");
+                        configs = new Configs(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\configs.ini");
                         switch (configs.DRIVER)
                         {
                             case "CHROME":
@@ -36,21 +46,24 @@ namespace TestAutomation.DriverLogic.Selenium
                                 driver = edgeDriver();
                                 break;
                         }
+                        waiter = new Waiter(driver, configs.timeouts);
+                        registerListener(waiter);
                         return driver;
                     }
                 }
             }
             return driver;
-        }
+        }       
         public void destroy()
         {
             if (driver != null)
             {
                 driver.Quit();
                 driver = null;
+                waiter = null;
             }
         }       
-        public void registerListener(Listener listener)
+        private void registerListener(Listener listener)
         {
             driver.ElementClicking += listener.elementClicking;
             driver.ElementClicked += listener.elementClicked;
