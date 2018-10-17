@@ -10,59 +10,58 @@ namespace TestAutomation.Pages.Yandex
         public static string url = "https://market.yandex.by/";
         public static string urlTemplate = "https://market.yandex.";
         #region locators
-        private string loginToMailButtonCssSelector = "div.n-passport-suggest-popup-opener a";
-        private string searchFieldId = "header-search";
-        private string searchText = "Note 8";
-        private string comparisonListButtonCssSelector = "a.link.header2-menu__item_type_compare";
-        private string foundElementCssSelector = "div.n-snippet-list.n-snippet-list_type_grid > div:nth-child({0})";
-        private string compareButtonCssSelector = "div.n-user-lists_type_compare_in-list_no";
-        private string compareButtonSelectedCssSelector = "div.n-user-lists_type_compare_in-list_yes";
-        private string elementLinkCssSelector = "div.n-snippet-cell2__header > div > a";
-        #endregion
-        public void openLoginPage()
+        private By LoginButton = By.CssSelector("div.n-passport-suggest-popup-opener a");
+        private By SearchField = By.Id("header-search");      
+        private By ComparisonListButton = By.CssSelector("a.link.header2-menu__item_type_compare");
+        private string productCssSelector = "div.n-snippet-list.n-snippet-list_type_grid > div:nth-child({0})";
+        private By Product(int n) {
+            return By.CssSelector(string.Format(productCssSelector, n));
+        }
+        private By ProductLink(int n)
         {
-            new Button().click(By.CssSelector(loginToMailButtonCssSelector));
+            return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-snippet-cell2__header > div > a");
+        }
+        private By ProductCompareButton(int n)
+        {
+            return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-user-lists_type_compare_in-list_no");
+        }
+        private By ProductSelectedCompareButton(int n)
+        {
+            return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-user-lists_type_compare_in-list_yes");
+        }
+        #endregion
+        #region data
+        private string searchText = "Note 8";
+        #endregion
+        #region actions
+        public void goToLoginToMarketPage()
+        {
+            button.click(LoginButton);
             browser.switchToLastTab();
             StringAssert.StartsWith(Login.urlTemplate, browser.getCurrentUrl());
-        }
-        public void search(string text)
+        }       
+        public void goToComparisonList()
         {
-            new Field().input(By.Id(searchFieldId), text);
-            new Mouse().useKeyboard(Keys.Enter);
-        }
-        public void openComparisonList()
-        {
-            new Button().click(By.CssSelector(comparisonListButtonCssSelector));
+            button.click(ComparisonListButton);
             StringAssert.StartsWith(ComparisonList.url, browser.getCurrentUrl());
         }
-        public void addElementsToComparison(int n)
+        public void searchProducts(string text)
         {
-            new Mouse().moveMouseTo(By.CssSelector(string.Format(foundElementCssSelector, n)));
-            if(!new ElementProperties().isPresent(By.CssSelector(string.Format(foundElementCssSelector, n) + " " + compareButtonSelectedCssSelector)))
-                new Button().click(By.CssSelector(string.Format(foundElementCssSelector, n) + " " + compareButtonCssSelector));
+            field.input(SearchField, text);
+            mouse.useKeyboard(Keys.Enter);
         }
-        public string getFoundElementLink(int n)
+        public void addProductToComparison(int n)
         {
-            string link = new ElementProperties().getAttribute(By.CssSelector(string.Format(foundElementCssSelector, n) + " " + elementLinkCssSelector), "href");
+            mouse.moveMouseTo(Product(n));
+            if(!new ElementProperties().isPresent(ProductSelectedCompareButton(n)))
+                button.click(ProductCompareButton(n));
+        }
+        public string getProductLink(int n)
+        {
+            string link = new ElementProperties().getAttribute(ProductLink(n), "href");
             int i = link.IndexOf('?');
-            if (i > 0) return link.Substring(0, i - 1);
-            return link;
-        }
-        public void addToComparison()
-        {
-            new Main().goToMarketTab();
-            openLoginPage();
-            new Login().loginSuccess();
-            browser.switchToFirstTab();
-            search(searchText);
-            addElementsToComparison(1);
-            addElementsToComparison(2);
-            List<string> links = new List<string>();
-            links.Add(getFoundElementLink(1));
-            links.Add(getFoundElementLink(2));
-            openComparisonList();
-            new ComparisonList().checkProducts(links);
-        }
+            return (i > 0) ? link.Substring(0, i - 1) : link;
+        }       
         public void sortByPrice()
         {
 
@@ -71,5 +70,23 @@ namespace TestAutomation.Pages.Yandex
         {
 
         }
+        #endregion
+        #region tests
+        public void Test_AddProductsToComparisonList()
+        {
+            new Main().goToMarketTab();
+            goToLoginToMarketPage();
+            new Login().loginSuccess();
+            browser.switchToFirstTab();
+            searchProducts(searchText);
+            addProductToComparison(1);
+            addProductToComparison(2);
+            List<string> links = new List<string>();
+            links.Add(getProductLink(1));
+            links.Add(getProductLink(2));
+            goToComparisonList();
+            new ComparisonList().checkProducts(links);
+        }
+        #endregion
     }
 }

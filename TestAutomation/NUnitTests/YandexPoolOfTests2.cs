@@ -11,13 +11,12 @@ namespace TestAutomation.NUnitTests
         [Test]
         public void AddItemToComparisonList()
         {           
-            new Market().addToComparison();
+            new Market().Test_AddProductsToComparisonList();
         }
         [Test]
         public void DeleteItemFromComparisonList()
         {
-            new Market().addToComparison();
-            new ComparisonList().removeAllElements();
+            new ComparisonList().Test_RemoveAllProductsFromComparisonList();
         }
         [Test]
         public void SortItemsByPrice()

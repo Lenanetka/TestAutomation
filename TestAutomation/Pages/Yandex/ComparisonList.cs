@@ -37,8 +37,11 @@ namespace TestAutomation.Pages.Yandex
                 currentList.Add(getProductLink(i));
             Assert.Contains(expectedList, currentList);           
         }
-        public void removeAllProducts()
+        #endregion
+        #region tests
+        public void Test_RemoveAllProductsFromComparisonList()
         {
+            new Market().Test_AddProductsToComparisonList();
             for (int i = 0; i < elementProperties.getListCount(ComparisonProductsList); i++)
                 button.click(ProductRemoveButton(i));
             Assert.False(new ElementProperties().isPresent(ComparisonProductsList));

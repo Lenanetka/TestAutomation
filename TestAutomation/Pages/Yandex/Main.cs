@@ -25,7 +25,7 @@ namespace TestAutomation.Pages.Yandex
             browser.navigate(url);
         }
         #region actions
-        public void goToLoginPage()
+        public void goToLoginToMailPage()
         {
             browser.navigate(url);
             button.click(LoginToMailButton);
