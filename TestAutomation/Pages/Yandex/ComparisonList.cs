@@ -5,32 +5,44 @@ using TestAutomation.DriverLogic.Selenium.Elements;
 
 namespace TestAutomation.Pages.Yandex
 {
-    class ComparisonList
+    class ComparisonList : PageMap
     {
         public static string url = "https://market.yandex.ua/compare";
-        private string comparedElementsCssSelector = "div.n-compare-content__line";
-        private string elementCssSelector = "div.n-compare-content__line > div:nth-child({0})";
-        private string elementLinkCssSelector = "> a";
-        private string elementDeleteButtonCssselector = "span.n-compare-head__close";
-        public string getElementLink(int n)
+        #region locators
+        private By ComparisonProductsList = By.CssSelector("div.n-compare-content__line");
+        private string productCssSelector = "div.n-compare-content__line > div:nth-child({0})";
+        private By Product(int n)
         {
-            string link = new ElementProperties().getAttribute(By.CssSelector(string.Format(elementCssSelector, n) + " " + elementLinkCssSelector), "href");
+            return By.CssSelector(string.Format(productCssSelector, n));
+        }
+        private By ProductLink(int n) {
+            return By.CssSelector(string.Format(productCssSelector, n) + " " + "> a");
+        }
+        private By ProductRemoveButton(int n)
+        {
+            return By.CssSelector(string.Format(productCssSelector, n) + " " + "span.n-compare-head__close");
+        }
+        #endregion
+        #region actions
+        public string getProductLink(int n)
+        {
+            string link = elementProperties.getAttribute(Product(n), "href");
             int i = link.IndexOf('?');
-            if (i > 0) return link.Substring(0, i - 1);
-            return link;
+            return (i > 0) ? link.Substring(0, i - 1) : link;
         }
-        public void checkElements(List<string> linksOfFound)
+        public void checkProducts(List<string> expectedList)
         {
-            List<string> linksOfAdded = new List<string>();
-            for (int i = 1; i <= new ElementProperties().getListOfChildrenCount(By.CssSelector(comparedElementsCssSelector)); i++)
-                linksOfAdded.Add(getElementLink(i));
-            Assert.Contains(linksOfFound, linksOfAdded);           
+            List<string> currentList = new List<string>();
+            for (int i = 1; i <= elementProperties.getListCount(ComparisonProductsList); i++)
+                currentList.Add(getProductLink(i));
+            Assert.Contains(expectedList, currentList);           
         }
-        public void removeAllElements()
+        public void removeAllProducts()
         {
-            for (int i = 0; i < new ElementProperties().getListOfChildrenCount(By.CssSelector(comparedElementsCssSelector)); i++)
-                new Button().click(By.CssSelector(string.Format(elementCssSelector, i) + " " + elementDeleteButtonCssselector));
-            Assert.False(new ElementProperties().isPresent(By.CssSelector(comparedElementsCssSelector)));
+            for (int i = 0; i < elementProperties.getListCount(ComparisonProductsList); i++)
+                button.click(ProductRemoveButton(i));
+            Assert.False(new ElementProperties().isPresent(ComparisonProductsList));
         }
+        #endregion
     }
 }

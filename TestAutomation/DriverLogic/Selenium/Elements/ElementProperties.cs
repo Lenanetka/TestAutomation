@@ -45,7 +45,7 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         {
             return waitUntilIsVisible(locator).Text;
         }
-        public int getListOfChildrenCount(By locator)
+        public int getListCount(By locator)
         {
             waitUntilIsVisible(locator);
             return driver.FindElements(locator).Count;
