@@ -13,6 +13,7 @@ namespace TestAutomation.Pages.Yandex
         private By LoginButton = By.CssSelector("div.n-passport-suggest-popup-opener a");
         private By SearchField = By.Id("header-search");      
         private By ComparisonListButton = By.CssSelector("a.link.header2-menu__item_type_compare");
+        private By ProductsList = By.CssSelector("div.n-snippet-list.n-snippet-list_type_grid");
         private string productCssSelector = "div.n-snippet-list.n-snippet-list_type_grid > div:nth-child({0})";
         private By Product(int n) {
             return By.CssSelector(string.Format(productCssSelector, n));
@@ -20,6 +21,10 @@ namespace TestAutomation.Pages.Yandex
         private By ProductLink(int n)
         {
             return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-snippet-cell2__header > div > a");
+        }
+        private By ProductPrice(int n)
+        {
+            return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.price");
         }
         private By ProductCompareButton(int n)
         {
@@ -29,6 +34,9 @@ namespace TestAutomation.Pages.Yandex
         {
             return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-user-lists_type_compare_in-list_yes");
         }
+        private By ElectronicsTabLink = By.XPath("//ul[@class='topmenu__list']/li[@data-department='Электроника']");
+        private By ActionCamerasMenuLink = By.XPath("//a[contains(text(),'Экшн-камеры')]");
+        private By SortByPriceButton = By.XPath("//a[contains(text(),'по цене')]");
         #endregion
         #region data
         private string searchText = "Note 8";
@@ -53,22 +61,20 @@ namespace TestAutomation.Pages.Yandex
         public void addProductToComparison(int n)
         {
             mouse.moveMouseTo(Product(n));
-            if(!new ElementProperties().isPresent(ProductSelectedCompareButton(n)))
+            if(!elementProperties.isPresent(ProductSelectedCompareButton(n)))
                 button.click(ProductCompareButton(n));
         }
         public string getProductLink(int n)
         {
-            string link = new ElementProperties().getAttribute(ProductLink(n), "href");
+            string link = elementProperties.getAttribute(ProductLink(n), "href");
             int i = link.IndexOf('?');
             return (i > 0) ? link.Substring(0, i - 1) : link;
-        }       
-        public void sortByPrice()
-        {
-
         }
-        public void sortByTag()
+        public int getProductPrice(int n)
         {
-
+            string price = elementProperties.getText(ProductPrice(n));
+            price = System.Text.RegularExpressions.Regex.Replace(price, "[^0-9]", "");
+            return int.Parse(price);
         }
         #endregion
         #region tests
@@ -76,9 +82,9 @@ namespace TestAutomation.Pages.Yandex
         {
             browser.navigate(Main.url);
             new Main().goToMarketTab();
-            goToLoginToMarketPage();
-            new Login().loginSuccess();
-            browser.switchToFirstTab();
+            //goToLoginToMarketPage();
+            //new Login().loginSuccess();
+            //browser.switchToFirstTab();
             searchProducts(searchText);
             addProductToComparison(1);
             addProductToComparison(2);
@@ -87,6 +93,25 @@ namespace TestAutomation.Pages.Yandex
             links.Add(getProductLink(2));
             goToComparisonList();
             new ComparisonList().checkProducts(links);
+        }
+        public void Test_SortingByPrice()
+        {
+            browser.navigate(Main.url);
+            new Main().goToMarketTab();
+            button.click(ElectronicsTabLink);
+            button.click(SortByPriceButton);
+            int n = elementProperties.getListCount(ProductsList);
+            if (n > 1)
+            {
+                System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
+                Assert.LessOrEqual(getProductPrice(1), getProductPrice(rnd.Next(2, n)));
+                Assert.LessOrEqual(getProductPrice(rnd.Next(2, n)), getProductPrice(n));
+            }           
+        }
+        public void Test_SortingByTag()
+        {
+            browser.navigate(Main.url);
+            new Main().goToMarketTab();          
         }
         #endregion
     }
