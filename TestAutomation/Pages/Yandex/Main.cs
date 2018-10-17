@@ -7,7 +7,7 @@ namespace TestAutomation.Pages.Yandex
     public class Main : PageMap
     {
         public static string url = "https://yandex.by/";
-
+        #region locators
         private By LoginToMailButton = By.CssSelector("a.desk-notif-card__login-enter-expanded");
         private By SelectLanguageButton = By.CssSelector("div.b-langs > div > a");
         private By EngLanguageButton = By.XPath("//span[@class='b-langs__text' and contains(text(), 'Eng')]");
@@ -19,7 +19,7 @@ namespace TestAutomation.Pages.Yandex
         private By MusicTabLink = By.XPath("//a[@data-statlog='tabs.music' and @data-id='music']");
         private By NewsTabLink = By.XPath("//a[@data-statlog='tabs.news' and @data-id='news']");
         private By TranslateTabLink = By.XPath("//a[@data-statlog='tabs.translate' and @data-id='translate']");
-
+        #endregion
         public Main() : base()
         {
             browser.navigate(url);

@@ -9,6 +9,7 @@ namespace TestAutomation.Pages.Yandex
     {
         public static string url = "https://market.yandex.by/";
         public static string urlTemplate = "https://market.yandex.";
+        #region locators
         private string loginToMailButtonCssSelector = "div.n-passport-suggest-popup-opener a";
         private string searchFieldId = "header-search";
         private string searchText = "Note 8";
@@ -17,6 +18,7 @@ namespace TestAutomation.Pages.Yandex
         private string compareButtonCssSelector = "div.n-user-lists_type_compare_in-list_no";
         private string compareButtonSelectedCssSelector = "div.n-user-lists_type_compare_in-list_yes";
         private string elementLinkCssSelector = "div.n-snippet-cell2__header > div > a";
+        #endregion
         public void openLoginPage()
         {
             new Button().click(By.CssSelector(loginToMailButtonCssSelector));
@@ -59,7 +61,7 @@ namespace TestAutomation.Pages.Yandex
             links.Add(getFoundElementLink(1));
             links.Add(getFoundElementLink(2));
             openComparisonList();
-            new ComparisonList().checkElements(links);
+            new ComparisonList().checkProducts(links);
         }
         public void sortByPrice()
         {

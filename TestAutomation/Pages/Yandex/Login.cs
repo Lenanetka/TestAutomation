@@ -7,21 +7,22 @@ namespace TestAutomation.Pages.Yandex
     public class Login : PageMap
     {
         public static string url = "https://passport.yandex.by/";
-        public static string urlTemplate = "https://passport.yandex.";  
-        
+        public static string urlTemplate = "https://passport.yandex.";
+        #region locators
         private By LoginField = By.Name("login");
         private By PasswordField = By.Name("passwd");
         private By SubmitLoginButtonOnFullForm = By.CssSelector("button.passport-Button");
         private By SubmitLoginButtonOnShortForm = By.CssSelector("button.passp-form-button");        
         private By ErrorLabel = By.XPath("//*[@id='root']/div/div[2]/div[1]/div[1]");
-
+        #endregion
+        #region data
         private string loginValid = "AutotestUser";
         private string passwordValid = "AutotestUser123";
         private string loginInvalid = "NoAutotestUser";
         private string passwordInvalid = "NoAutotestUser123";
         private string invalidLoginErrorMessage = "Такого аккаунта нет";
         private string invalidPasswordErrorMessage = "Неверный пароль";
-
+        #endregion
         public Login(): base()
         {
             
