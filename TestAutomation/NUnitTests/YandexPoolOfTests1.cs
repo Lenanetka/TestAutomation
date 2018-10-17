@@ -31,7 +31,7 @@ namespace TestAutomation.NUnitTests
         [Test]
         public void ChangeLanguage_English()
         {
-            new Main().Test_ChangeLanguage_English();
+            new Main().Test_ChangeLanguageToEnglish();
         }
         [Test]
         public void Logout()

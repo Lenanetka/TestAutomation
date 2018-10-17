@@ -32,6 +32,7 @@ namespace TestAutomation.Pages.Yandex
         #region tests
         public void Test_Logout()
         {
+            browser.navigate(Main.url);
             new Main().goToLoginToMailPage();
             new Login().loginSuccess();
             logout();

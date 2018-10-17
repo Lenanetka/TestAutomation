@@ -74,6 +74,7 @@ namespace TestAutomation.Pages.Yandex
         #region tests
         public void Test_AddProductsToComparisonList()
         {
+            browser.navigate(Main.url);
             new Main().goToMarketTab();
             goToLoginToMarketPage();
             new Login().loginSuccess();

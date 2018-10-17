@@ -22,12 +22,11 @@ namespace TestAutomation.Pages.Yandex
         #endregion
         public Main() : base()
         {
-            browser.navigate(url);
+            
         }
         #region actions
         public void goToLoginToMailPage()
         {
-            browser.navigate(url);
             button.click(LoginToMailButton);
             StringAssert.StartsWith(Login.urlTemplate, browser.getCurrentUrl());
         }                            
@@ -70,6 +69,7 @@ namespace TestAutomation.Pages.Yandex
         #region tests
         public void Test_Navigation()
         {
+            browser.navigate(url);
             goToVideoTab();
             browser.navigateBack();
             goToImagesTab();
@@ -84,7 +84,7 @@ namespace TestAutomation.Pages.Yandex
             browser.navigateBack();
             goToTranslateTab();
         }
-        public void Test_ChangeLanguage_English()
+        public void Test_ChangeLanguageToEnglish()
         {
             browser.navigate(url);
             button.click(SelectLanguageButton);
@@ -93,7 +93,7 @@ namespace TestAutomation.Pages.Yandex
             else
             {
                 button.click(AddLanguageButton);
-                new Language().setLanguage_English();
+                new Language().setLanguageToEnglish();
             }
             StringAssert.IsMatch("Eng", elementProperties.getText(SelectLanguageButton));
         }

@@ -13,7 +13,7 @@ namespace TestAutomation.Pages.Yandex
         private By SubmitLanguageButton = By.XPath("//div[@class='form__controls']//button[@type='submit']");
         #endregion
         #region actions
-        public void setLanguage_English()
+        public void setLanguageToEnglish()
         {
             button.click(SelectLanguageDropDownList);
             button.click(EnglishLanguageButton);

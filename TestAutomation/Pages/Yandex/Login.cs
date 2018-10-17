@@ -60,18 +60,21 @@ namespace TestAutomation.Pages.Yandex
         #region tests
         public void Test_Login_Success()
         {
-            new Main().goToLoginPage();
+            browser.navigate(Main.url);
+            new Main().goToLoginToMailPage();
             loginSuccess();
             new Mail().checkUserName(loginValid);
         }
         public void Test_Login_InvalidLogin()
         {
-            new Main().goToLoginPage();
+            browser.navigate(Main.url);
+            new Main().goToLoginToMailPage();
             loginError(loginInvalid, passwordValid, invalidLoginErrorMessage);
         }
         public void Test_Login_InvalidPassword()
         {
-            new Main().goToLoginPage();
+            browser.navigate(Main.url);
+            new Main().goToLoginToMailPage();
             loginError(loginValid, passwordInvalid, invalidPasswordErrorMessage);
         }
         #endregion
