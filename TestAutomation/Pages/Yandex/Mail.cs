@@ -17,8 +17,8 @@ namespace TestAutomation.Pages.Yandex
         }
         public void logout()
         {
-            new Button().click(By.XPath(userButtonXPath));
-            new Button().click(By.CssSelector(userDropDownListCSSSelector));
+            button.click(By.XPath(userButtonXPath));
+            button.click(By.CssSelector(userDropDownListCSSSelector));
 
             StringAssert.StartsWith(Main.url, browser.getCurrentUrl());
         }

@@ -1,7 +1,7 @@
 {
-  "uuid": "d9cb0a85-83e6-458a-9feb-94ad7837f78a-tr-0-1004",
-  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
-  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
+  "uuid": "2ceec0f6-ea6f-4939-b29e-c18dd8ad5388-tr-0-1001",
+  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_ValidData",
+  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_ValidData",
   "labels": [
     {
       "name": "thread",
@@ -17,7 +17,7 @@
     },
     {
       "name": "testMethod",
-      "value": "Navigation"
+      "value": "Login_ValidData"
     },
     {
       "name": "package",
@@ -33,7 +33,7 @@
     }
   ],
   "links": [],
-  "name": "Navigation",
+  "name": "Login_ValidData",
   "status": "passed",
   "statusDetails": {
     "known": false,
@@ -43,7 +43,7 @@
   "stage": "finished",
   "steps": [
     {
-      "name": "Navigation",
+      "name": "Login_ValidData",
       "status": "passed",
       "statusDetails": {
         "known": false,
@@ -55,17 +55,17 @@
       "attachments": [
         {
           "name": "Console Output",
-          "source": "baf8641af6c348a9b049fe5a3488e665-attachment.txt",
+          "source": "155c5f6d44404727a21eeb34bbf37660-attachment.txt",
           "type": "text/plain"
         }
       ],
       "parameters": [],
-      "start": 1539747740495,
-      "stop": 1539747809600
+      "start": 1539749676386,
+      "stop": 1539749702943
     }
   ],
   "attachments": [],
   "parameters": [],
-  "start": 1539747740492,
-  "stop": 1539747809606
+  "start": 1539749676384,
+  "stop": 1539749702949
 }

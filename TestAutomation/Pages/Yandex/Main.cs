@@ -7,6 +7,7 @@ namespace TestAutomation.Pages.Yandex
     public class Main : PageMap
     {
         public static string url = "https://yandex.by/";
+
         private By LoginToMailButton = By.CssSelector("a.desk-notif-card__login-enter-expanded");
         private By SelectLanguageButton = By.CssSelector("div.b-langs > div > a");
         private By EngLanguageButton = By.XPath("//span[@class='b-langs__text' and contains(text(), 'Eng')]");

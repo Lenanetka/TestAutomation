@@ -7,53 +7,68 @@ namespace TestAutomation.Pages.Yandex
     public class Login : PageMap
     {
         public static string url = "https://passport.yandex.by/";
-        public static string urlTemplate = "https://passport.yandex.";
-        private string loginS = "AutotestUser";
-        private string passwordS = "AutotestUser123";
-        private string loginF = "NoAutotestUser";
-        private string passwordF = "NoAutotestUser123";
-        private string loginFieldName = "login";
-        private string passwordFieldName = "passwd";
-        private string submitLoginButtonFullCssSelector = "button.passport-Button";
-        private string submitLoginButtonShortCssSelector = "button.passp-form-button";
+        public static string urlTemplate = "https://passport.yandex.";  
         
-        private string errorLabelXPath = "//*[@id='root']/div/div[2]/div[1]/div[1]";
+        private By LoginField = By.Name("login");
+        private By PasswordField = By.Name("passwd");
+        private By SubmitLoginButtonOnFullForm = By.CssSelector("button.passport-Button");
+        private By SubmitLoginButtonOnShortForm = By.CssSelector("button.passp-form-button");        
+        private By ErrorLabel = By.XPath("//*[@id='root']/div/div[2]/div[1]/div[1]");
+
+        private string loginValid = "AutotestUser";
+        private string passwordValid = "AutotestUser123";
+        private string loginInvalid = "NoAutotestUser";
+        private string passwordInvalid = "NoAutotestUser123";
+        private string invalidLoginErrorMessage = "Такого аккаунта нет";
+        private string invalidPasswordErrorMessage = "Неверный пароль";
+
         public Login(): base()
         {
             
         }
         public void loginFullForm(string name, string password)
         {
-            new Field().input(By.Name(loginFieldName), name);
-            new Field().input(By.Name(passwordFieldName), password);
-            new Button().click(By.CssSelector(submitLoginButtonFullCssSelector));
+            field.input(LoginField, name);
+            field.input(PasswordField, password);
+            button.click(SubmitLoginButtonOnFullForm);
         }
         public void loginShortForm(string name, string password)
         {
-            new Field().input(By.Name(loginFieldName), name);
-            new Button().click(By.CssSelector(submitLoginButtonShortCssSelector));
-            new Field().input(By.Name(passwordFieldName), password);
-            new Button().click(By.CssSelector(submitLoginButtonShortCssSelector));
+            field.input(LoginField, name);
+            button.click(SubmitLoginButtonOnShortForm);
+            field.input(PasswordField, password);
+            button.click(SubmitLoginButtonOnShortForm);
         }
         public void login(string name, string password)
         {
-            if (!new ElementProperties().isPresent(By.Name(passwordFieldName)))
+            if (!new ElementProperties().isPresent(PasswordField))
                 loginShortForm(name, password);
             else loginFullForm(name, password);
         }
         public void loginSuccess()
         {
-            login(loginS, passwordS);
+            login(loginValid, passwordValid);
         }
-        public void loginInvalidLogin()
+        public void loginError(string name, string password, string expectedErrorMessage)
         {
-            login(loginF, passwordS);
-            StringAssert.Contains("Такого аккаунта нет", new ElementProperties().getText(By.XPath(errorLabelXPath)));
+            login(name, password);
+            Assert.AreEqual(expectedErrorMessage, elementProperties.getText(ErrorLabel));
         }
-        public void loginInvalidPassword()
+        public void Test_Login_Success()
         {
-            login(loginS, passwordF);
-            StringAssert.Contains("Неверный пароль", new ElementProperties().getText(By.XPath(errorLabelXPath)));
+            new Main().goToLoginPage();
+            loginSuccess();
+            new Mail().checkUserName();
         }
+        public void Test_Login_InvalidLogin()
+        {
+            new Main().goToLoginPage();
+            loginError(loginInvalid, passwordValid, invalidLoginErrorMessage);
+        }
+        public void Test_Login_InvalidPassword()
+        {
+            new Main().goToLoginPage();
+            loginError(loginValid, passwordInvalid, invalidPasswordErrorMessage);
+        }       
     }
 }

@@ -11,21 +11,17 @@ namespace TestAutomation.NUnitTests
         [Test]
         public void Login_ValidData()
         {
-            new Main().goToLoginPage();
-            new Login().loginSuccess();
-            new Mail().checkUserName();
+            new Login().Test_Login_Success();
         }
         [Test]
         public void Login_InvalidPassword()
         {
-            new Main().goToLoginPage();
-            new Login().loginInvalidPassword();
+            new Login().Test_Login_InvalidPassword();
         }
         [Test]
         public void Login_InvalidLogin()
         {
-            new Main().goToLoginPage();
-            new Login().loginInvalidLogin();
+            new Login().Test_Login_InvalidLogin();
         }
         [Test]
         public void Navigation()

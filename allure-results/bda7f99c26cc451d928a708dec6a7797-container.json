@@ -1,8 +1,8 @@
 {
-  "uuid": "fc1a6367-63fa-4dfb-a0b4-0d7b8172b9c3-tc-0-1000",
-  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
+  "uuid": "05364cc9-0c1c-438a-b2fb-40c47be72ed6-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_ValidData",
   "children": [
-    "d9cb0a85-83e6-458a-9feb-94ad7837f78a-tr-0-1004"
+    "2ceec0f6-ea6f-4939-b29e-c18dd8ad5388-tr-0-1001"
   ],
   "befores": [
     {
@@ -17,8 +17,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1539747809594,
-      "stop": 1539747809594
+      "start": 1539749702937,
+      "stop": 1539749702937
     }
   ],
   "afters": [
@@ -34,11 +34,11 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1539747809595,
-      "stop": 1539747809595
+      "start": 1539749702939,
+      "stop": 1539749702939
     }
   ],
   "links": [],
-  "start": 1539747740487,
-  "stop": 1539747809702
+  "start": 1539749676377,
+  "stop": 1539749703044
 }
