@@ -36,9 +36,7 @@ namespace TestAutomation.NUnitTests
         [Test]
         public void Logout()
         {
-            new Main().goToLoginPage();
-            new Login().loginSuccess();
-            new Mail().logout();
+            new Mail().Test_Logout();
         }
     }
 }

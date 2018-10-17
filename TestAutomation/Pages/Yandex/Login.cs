@@ -26,6 +26,7 @@ namespace TestAutomation.Pages.Yandex
         {
             
         }
+        #region actions
         public void loginFullForm(string name, string password)
         {
             field.input(LoginField, name);
@@ -54,11 +55,13 @@ namespace TestAutomation.Pages.Yandex
             login(name, password);
             Assert.AreEqual(expectedErrorMessage, elementProperties.getText(ErrorLabel));
         }
+        #endregion
+        #region tests
         public void Test_Login_Success()
         {
             new Main().goToLoginPage();
             loginSuccess();
-            new Mail().checkUserName();
+            new Mail().checkUserName(loginValid);
         }
         public void Test_Login_InvalidLogin()
         {
@@ -69,6 +72,7 @@ namespace TestAutomation.Pages.Yandex
         {
             new Main().goToLoginPage();
             loginError(loginValid, passwordInvalid, invalidPasswordErrorMessage);
-        }       
+        }
+        #endregion
     }
 }

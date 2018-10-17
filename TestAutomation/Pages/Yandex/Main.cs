@@ -24,6 +24,7 @@ namespace TestAutomation.Pages.Yandex
         {
             browser.navigate(url);
         }
+        #region actions
         public void goToLoginPage()
         {
             browser.navigate(url);
@@ -65,6 +66,8 @@ namespace TestAutomation.Pages.Yandex
             button.click(TranslateTabLink);
             StringAssert.StartsWith(Translate.url, browser.getCurrentUrl());
         }
+        #endregion
+        #region tests
         public void Test_Navigation()
         {
             goToVideoTab();
@@ -94,5 +97,6 @@ namespace TestAutomation.Pages.Yandex
             }
             StringAssert.IsMatch("Eng", elementProperties.getText(SelectLanguageButton));
         }
+        #endregion
     }
 }
