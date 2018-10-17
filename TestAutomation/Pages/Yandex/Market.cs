@@ -35,8 +35,11 @@ namespace TestAutomation.Pages.Yandex
             return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-user-lists_type_compare_in-list_yes");
         }
         private By ElectronicsTabLink = By.XPath("//ul[@class='topmenu__list']/li[@data-department='Электроника']");
+        private By AppliancesTabLink = By.XPath("//ul[@class='topmenu__list']/li[@data-department='Бытовая техника']");
         private By ActionCamerasMenuLink = By.XPath("//a[contains(text(),'Экшн-камеры')]");
+        private By RefrigeratorsMenuLink = By.XPath("//a[contains(text(),'Холодильники')]");
         private By SortByPriceButton = By.XPath("//a[contains(text(),'по цене')]");
+        private By WidthUpToField = By.Name("Ширина до");
         #endregion
         #region data
         private string searchText = "Note 8";
@@ -111,7 +114,10 @@ namespace TestAutomation.Pages.Yandex
         public void Test_SortingByTag()
         {
             browser.navigate(Main.url);
-            new Main().goToMarketTab();          
+            new Main().goToMarketTab();
+            button.click(AppliancesTabLink);
+            field.input(WidthUpToField, "50");
+            //wait scripts
         }
         #endregion
     }
