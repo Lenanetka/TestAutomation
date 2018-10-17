@@ -7,14 +7,18 @@ namespace TestAutomation.Pages.Yandex
     class Language: PageMap
     {
         public static string url = "https://yandex.by/tune/lang/";
-        private string selectLanguageButtonCSSSelector = "div.option__content > div.select.option__select > button.select__button.button_arrow_down";
-        private string englishLanguageButtonXPath = "//div[@class='popup__content']//span[@class='select__text' and contains(text(), 'English')]";
-        private string submitLanguageButtonXPath = "//div[@class='form__controls']//button[@type='submit']";
+
+        private By SelectLanguageDropDownList = By.CssSelector("div.option__content > div.select.option__select > button.select__button.button_arrow_down");
+        private By EnglishLanguageButton = By.XPath("//div[@class='popup__content']//span[@class='select__text' and contains(text(), 'English')]");
+        private By SubmitLanguageButton = By.XPath("//div[@class='form__controls']//button[@type='submit']");
+        
+        #region actions
         public void setLanguage_English()
         {
-            new Button().click(By.CssSelector(selectLanguageButtonCSSSelector));
-            new Button().click(By.XPath(englishLanguageButtonXPath));
-            new Button().click(By.XPath(submitLanguageButtonXPath));
+            button.click(SelectLanguageDropDownList);
+            button.click(EnglishLanguageButton);
+            button.click(SubmitLanguageButton);
         }
+        #endregion
     }
 }
