@@ -1,8 +1,8 @@
 {
-  "uuid": "47fc5077-3453-4282-8f1d-a0a5e16ee72f-tc-0-1007",
-  "name": "TestAutomation.NUnitTests.YandexPullOfTests2.AddItemToComparisonList",
+  "uuid": "fc1a6367-63fa-4dfb-a0b4-0d7b8172b9c3-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
   "children": [
-    "b64de3ee-caf9-485c-b562-dbb5506abb90-tr-0-1008"
+    "d9cb0a85-83e6-458a-9feb-94ad7837f78a-tr-0-1004"
   ],
   "befores": [
     {
@@ -17,8 +17,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1539670989392,
-      "stop": 1539670989392
+      "start": 1539747809594,
+      "stop": 1539747809594
     }
   ],
   "afters": [
@@ -34,11 +34,11 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1539670989393,
-      "stop": 1539670989393
+      "start": 1539747809595,
+      "stop": 1539747809595
     }
   ],
   "links": [],
-  "start": 1539670936827,
-  "stop": 1539670989579
+  "start": 1539747740487,
+  "stop": 1539747809702
 }

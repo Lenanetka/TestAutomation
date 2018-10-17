@@ -1,12 +1,12 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using TestAutomation.PageMaps.Yandex;
+using TestAutomation.Pages.Yandex;
 
 namespace TestAutomation.NUnitTests
 {
     [TestFixture]
     [AllureSubSuite("Pool of tests 2")]
-    class YandexPullOfTests2 : TestBase
+    class YandexPoolOfTests2 : TestBase
     {
         [Test]
         public void AddItemToComparisonList()

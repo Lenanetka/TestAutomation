@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using System.Collections.Generic;
 using TestAutomation.DriverLogic.Selenium.Elements;
 
-namespace TestAutomation.PageMaps.Yandex
+namespace TestAutomation.Pages.Yandex
 {
     class ComparisonList
     {

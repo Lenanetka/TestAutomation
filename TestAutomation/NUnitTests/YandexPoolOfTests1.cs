@@ -1,46 +1,46 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using TestAutomation.PageMaps.Yandex;
+using TestAutomation.Pages.Yandex;
 
 namespace TestAutomation.NUnitTests
 {
     [TestFixture]
     [AllureSubSuite("Pool of tests 1")]
-    class YandexPullOfTests1 : TestBase
+    class YandexPoolOfTests1 : TestBase
     {
         [Test]
         public void Login_ValidData()
         {
-            new Main().openLoginPage();
+            new Main().goToLoginPage();
             new Login().loginSuccess();
             new Mail().checkUserName();
         }
         [Test]
         public void Login_InvalidPassword()
         {
-            new Main().openLoginPage();
+            new Main().goToLoginPage();
             new Login().loginInvalidPassword();
         }
         [Test]
         public void Login_InvalidLogin()
         {
-            new Main().openLoginPage();
+            new Main().goToLoginPage();
             new Login().loginInvalidLogin();
         }
         [Test]
         public void Navigation()
         {
-            new Main().navigationSuccess();
+            new Main().Test_Navigation();
         }
         [Test]
         public void ChangeLanguage_English()
         {
-            new Main().changeLanguage_English();
+            new Main().Test_ChangeLanguage_English();
         }
         [Test]
         public void Logout()
         {
-            new Main().openLoginPage();
+            new Main().goToLoginPage();
             new Login().loginSuccess();
             new Mail().logout();
         }

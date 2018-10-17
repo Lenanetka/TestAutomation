@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using NUnit.Framework;
 
-namespace TestAutomation.PageMaps.Yandex
+namespace TestAutomation.Pages.Yandex
 {
     public class Login : PageMap
     {

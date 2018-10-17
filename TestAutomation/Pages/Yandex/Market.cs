@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using System.Collections.Generic;
 using TestAutomation.DriverLogic.Selenium.Elements;
 
-namespace TestAutomation.PageMaps.Yandex
+namespace TestAutomation.Pages.Yandex
 {
     class Market : PageMap
     {
@@ -48,7 +48,7 @@ namespace TestAutomation.PageMaps.Yandex
         }
         public void addToComparison()
         {
-            new Main().openMarket();
+            new Main().goToMarketTab();
             openLoginPage();
             new Login().loginSuccess();
             browser.switchToFirstTab();

@@ -1,0 +1,71 @@
+{
+  "uuid": "d9cb0a85-83e6-458a-9feb-94ad7837f78a-tr-0-1004",
+  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
+  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "LENANETKA-PC"
+    },
+    {
+      "name": "testClass",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "testMethod",
+      "value": "Navigation"
+    },
+    {
+      "name": "package",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "subSuite",
+      "value": "Pool of tests 1"
+    },
+    {
+      "name": "parentSuite",
+      "value": "All tests"
+    }
+  ],
+  "links": [],
+  "name": "Navigation",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Navigation",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "baf8641af6c348a9b049fe5a3488e665-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1539747740495,
+      "stop": 1539747809600
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1539747740492,
+  "stop": 1539747809606
+}
