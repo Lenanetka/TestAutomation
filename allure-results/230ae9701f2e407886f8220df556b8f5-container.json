@@ -1,8 +1,8 @@
 {
-  "uuid": "05364cc9-0c1c-438a-b2fb-40c47be72ed6-tc-0-1000",
-  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_ValidData",
+  "uuid": "1aed878a-3c02-49b0-9ccd-a7e92b0e21ca-tc-0-1007",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests2.DeleteItemsFromComparisonList",
   "children": [
-    "2ceec0f6-ea6f-4939-b29e-c18dd8ad5388-tr-0-1001"
+    "f83f1ed0-b9f0-49a2-8d7d-9752a707e788-tr-0-1009"
   ],
   "befores": [
     {
@@ -17,8 +17,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1539749702937,
-      "stop": 1539749702937
+      "start": 1540189481942,
+      "stop": 1540189481942
     }
   ],
   "afters": [
@@ -34,11 +34,11 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1539749702939,
-      "stop": 1539749702939
+      "start": 1540189481943,
+      "stop": 1540189481943
     }
   ],
   "links": [],
-  "start": 1539749676377,
-  "stop": 1539749703044
+  "start": 1540189409583,
+  "stop": 1540189482060
 }

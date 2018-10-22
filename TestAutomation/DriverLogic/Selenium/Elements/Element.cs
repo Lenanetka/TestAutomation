@@ -9,6 +9,10 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         {
 
         }
+        public void waitUntilScriptsFinished()
+        {
+            wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (document.readyState == 'complete' && jQuery.active == 0)"));
+        }
         #region byLocator
         protected IWebElement waitUntilIsVisible(By locator)
         {

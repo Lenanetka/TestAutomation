@@ -12,6 +12,7 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
             IWebElement element = waitUntilIsClickable(locator);
             element.Clear();
             element.SendKeys(input);
+            waitUntilScriptsFinished();
         }
         public void clear(By locator)
         {

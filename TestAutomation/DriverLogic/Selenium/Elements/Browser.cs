@@ -16,18 +16,22 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         public void navigate(string url)
         {
             driver.Navigate().GoToUrl(url);
+            waitUntilScriptsFinished();
         }
         public void refresh()
         {
             driver.Navigate().Refresh();
+            waitUntilScriptsFinished();
         }
         public void navigateBack()
         {
             driver.Navigate().Back();
+            waitUntilScriptsFinished();
         }
         public void navigateForward()
         {
             driver.Navigate().Forward();
+            waitUntilScriptsFinished();
         }
         public void waitUntilScriptsFinished()
         {

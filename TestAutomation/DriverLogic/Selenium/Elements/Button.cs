@@ -11,10 +11,12 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
         {
 
             waitUntilIsClickable(locator).Click();
+            waitUntilScriptsFinished();
         }
         public void click(IWebElement element)
         {
             waitUntilIsClickable(element).Click();
+            waitUntilScriptsFinished();
         }
     }
 }

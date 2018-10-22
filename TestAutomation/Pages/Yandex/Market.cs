@@ -39,6 +39,7 @@ namespace TestAutomation.Pages.Yandex
         private By ActionCamerasMenuLink = By.XPath("//a[contains(text(),'Экшн-камеры')]");
         private By RefrigeratorsMenuLink = By.XPath("//a[contains(text(),'Холодильники')]");
         private By SortByPriceButton = By.XPath("//a[contains(text(),'по цене')]");
+        private By AllFiltersButton = By.XPath("//span[contains(text(),'Все фильтры')]");
         private By WidthUpToField = By.Name("Ширина до");
         #endregion
         #region data
@@ -102,22 +103,25 @@ namespace TestAutomation.Pages.Yandex
             browser.navigate(Main.url);
             new Main().goToMarketTab();
             button.click(ElectronicsTabLink);
+            button.click(ActionCamerasMenuLink);
             button.click(SortByPriceButton);
             int n = elementProperties.getListCount(ProductsList);
-            if (n > 1)
-            {
-                System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
-                Assert.LessOrEqual(getProductPrice(1), getProductPrice(rnd.Next(2, n)));
-                Assert.LessOrEqual(getProductPrice(rnd.Next(2, n)), getProductPrice(n));
-            }           
+            Assert.Greater(n, 1);
+            System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
+            Assert.LessOrEqual(getProductPrice(1), getProductPrice(rnd.Next(2, n)));
+            Assert.LessOrEqual(getProductPrice(rnd.Next(2, n)), getProductPrice(n));
         }
         public void Test_SortingByTag()
         {
             browser.navigate(Main.url);
             new Main().goToMarketTab();
             button.click(AppliancesTabLink);
+            button.click(RefrigeratorsMenuLink);
+            if (elementProperties.isPresent(AllFiltersButton)) button.click(AllFiltersButton);
             field.input(WidthUpToField, "50");
-            //wait scripts
+            int n = elementProperties.getListCount(ProductsList);
+            Assert.Greater(n, 1);
+            //Страница изменилась до неузнаваемости...
         }
         #endregion
     }
