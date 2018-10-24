@@ -33,10 +33,6 @@ namespace TestAutomation.DriverLogic.Selenium.Elements
             driver.Navigate().Forward();
             waitUntilScriptsFinished();
         }
-        public void waitUntilScriptsFinished()
-        {
-            wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (document.readyState == 'complete' && jQuery.active == 0)"));
-        }
         public void close()
         {
             new InitialDriver().destroy();

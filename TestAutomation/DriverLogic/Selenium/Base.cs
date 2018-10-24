@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Support.Events;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using TestAutomation.DriverLogic.Selenium.Listeners;
 
@@ -19,6 +20,10 @@ namespace TestAutomation.DriverLogic.Selenium
         {
             var initializer = new InitialDriver();
             driver = initializer.getInstance();
-        }        
+        }
+        public void waitUntilScriptsFinished()
+        {
+            wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (document.readyState == 'complete' && jQuery.active == 0)"));
+        }
     }
 }
