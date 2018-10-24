@@ -2,9 +2,9 @@
   "allure": {
     "directory": "allure-results",
     "links": [
-      "{link}",
-      "{issue}",
-      "{tms}"
+        "{link}",
+        "https://jira.com/browse/{issue}",
+        "https://testrail.com/browse/{tms}"
     ]
   },
   "specflow": {
@@ -22,15 +22,9 @@
       "behaviors": {
         "epic": "^epic:?(.+)",
         "story": "^story:?(.+)"
-      },
-      "packages": {
-        "package": "^package:?(.+)",
-        "testClass": "^class:?(.+)",
-        "testMethod": "^method:?(.+)"
       }
     },
     "labels": {
-      "owner": "^owner:?(.+)",
       "severity": "^(normal|blocker|critical|minor|trivial)"
     },
     "links": {
