@@ -64,6 +64,8 @@ namespace TestAutomation.Pages.Yandex
             new Main().goToLoginToMailPage();
             loginSuccess();
             new Mail().checkUserName(loginValid);
+            //end
+            new Mail().logout();
         }
         public void Test_Login_InvalidLogin()
         {

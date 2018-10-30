@@ -34,6 +34,11 @@ namespace TestAutomation.Pages.Yandex
         {
             return By.CssSelector(string.Format(productCssSelector, n) + " " + "div.n-user-lists_type_compare_in-list_yes");
         }
+        private string refrigeratorWidthCssSelector = "div.n-filter-applied-results > div > div.n-snippet-list.metrika> div:nth-child({0}) ul > li:nth-child(1)";
+        private By RefrigeratorWidth(int n)
+        {
+            return By.CssSelector(string.Format(refrigeratorWidthCssSelector, n));
+        }
         private By ElectronicsTabLink = By.XPath("//ul[@class='topmenu__list']/li[@data-department='Электроника']");
         private By AppliancesTabLink = By.XPath("//ul[@class='topmenu__list']/li[@data-department='Бытовая техника']");
         private By ActionCamerasMenuLink = By.XPath("//a[contains(text(),'Экшн-камеры')]");
@@ -44,6 +49,8 @@ namespace TestAutomation.Pages.Yandex
         #endregion
         #region data
         private string searchText = "Note 8";
+        private string widthToText = "50";
+        private int maxWidth = 50;
         #endregion
         #region actions
         public void goToLoginToMarketPage()
@@ -80,6 +87,13 @@ namespace TestAutomation.Pages.Yandex
             price = System.Text.RegularExpressions.Regex.Replace(price, "[^0-9]", "");
             return int.Parse(price);
         }
+        public double getRefrigeratorWidth(int n)
+        {
+            string price = elementProperties.getText(RefrigeratorWidth(n));
+            price.Substring(0,price.IndexOf("x"));
+            price = price.Substring(0, price.IndexOf("x"));
+            return double.Parse(price);
+        }
         #endregion
         #region tests
         public void Test_AddProductsToComparisonList()
@@ -97,6 +111,8 @@ namespace TestAutomation.Pages.Yandex
             links.Add(getProductLink(2));
             goToComparisonList();
             new ComparisonList().checkProducts(links);
+            //end
+            new ComparisonList().removeAllFromComparisonList();
         }
         public void Test_SortingByPrice()
         {
@@ -118,10 +134,12 @@ namespace TestAutomation.Pages.Yandex
             button.click(AppliancesTabLink);
             button.click(RefrigeratorsMenuLink);
             if (elementProperties.isPresent(AllFiltersButton)) button.click(AllFiltersButton);
-            field.input(WidthUpToField, "50");
+            field.input(WidthUpToField, widthToText);
             int n = elementProperties.getListCount(ProductsList);
             Assert.Greater(n, 1);
-            //Страница изменилась до неузнаваемости...
+            System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
+            Assert.LessOrEqual(getRefrigeratorWidth(1), maxWidth);
+            Assert.LessOrEqual(getRefrigeratorWidth(rnd.Next(2, n)), maxWidth);
         }
         #endregion
     }

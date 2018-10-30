@@ -10,7 +10,7 @@ namespace TestAutomation.Pages.Yandex
         #region locators
         private By UserButton = By.CssSelector("div.ns-view-head-user.mail-User");
         private By LogoutButton = By.CssSelector(".b-user-dropdown-content.b-user-dropdown-content-with-exit>div:nth-child(7)");
-        private By UserNameLabel = By.ClassName("mail-User-Name");
+        private By UserNameLabel = By.ClassName("mail-User-Name");      
         #endregion
         public Mail() : base()
         {

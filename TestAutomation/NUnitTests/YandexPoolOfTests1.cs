@@ -1,11 +1,13 @@
 ﻿using Allure.Commons;
 using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using TestAutomation.Pages.Yandex;
 
 namespace TestAutomation.NUnitTests
 {
     [TestFixture]
+    [AllureNUnit]
     [AllureSuite("Yandex")]
     [AllureSubSuite("Pool 1")]
     class YandexPoolOfTests1 : TestBase

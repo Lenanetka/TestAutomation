@@ -1,8 +1,8 @@
 {
-  "uuid": "1aed878a-3c02-49b0-9ccd-a7e92b0e21ca-tc-0-1007",
-  "name": "TestAutomation.NUnitTests.YandexPoolOfTests2.DeleteItemsFromComparisonList",
+  "uuid": "55267fc7-f2da-4f10-88d9-3f04fd659a7d-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Navigation",
   "children": [
-    "f83f1ed0-b9f0-49a2-8d7d-9752a707e788-tr-0-1009"
+    "3665db5c-af88-4a7e-9df6-93cf4c94e47a-tr-0-1004"
   ],
   "befores": [
     {
@@ -17,8 +17,8 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1540189481942,
-      "stop": 1540189481942
+      "start": 1540883733110,
+      "stop": 1540883733110
     }
   ],
   "afters": [
@@ -34,11 +34,11 @@
       "steps": [],
       "attachments": [],
       "parameters": [],
-      "start": 1540189481943,
-      "stop": 1540189481943
+      "start": 1540883733112,
+      "stop": 1540883733112
     }
   ],
   "links": [],
-  "start": 1540189409583,
-  "stop": 1540189482060
+  "start": 1540883654321,
+  "stop": 1540883733378
 }
