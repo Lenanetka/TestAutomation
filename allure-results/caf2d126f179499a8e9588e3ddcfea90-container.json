@@ -1,0 +1,44 @@
+{
+  "uuid": "e9cc74d7-382c-4cf1-824e-2a1ab9d90358-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_InvalidPassword",
+  "children": [
+    "00e2ffd2-4ceb-47b9-ab36-3d678497c228-tr-0-1002"
+  ],
+  "befores": [
+    {
+      "name": "OneTimeSetup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914043886,
+      "stop": 1540914043886
+    }
+  ],
+  "afters": [
+    {
+      "name": "tearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914043886,
+      "stop": 1540914043886
+    }
+  ],
+  "links": [],
+  "start": 1540914040881,
+  "stop": 1540914043900
+}

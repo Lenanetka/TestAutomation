@@ -1,0 +1,90 @@
+{
+  "uuid": "cd3b513b-0ba8-44d6-8d12-44a455d7eb62-tr-0-1001",
+  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_ValidData",
+  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_ValidData",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-C865P7Q"
+    },
+    {
+      "name": "testClass",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "testMethod",
+      "value": "Login_ValidData"
+    },
+    {
+      "name": "package",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "severity",
+      "value": "blocker"
+    },
+    {
+      "name": "suite",
+      "value": "Yandex"
+    },
+    {
+      "name": "subSuite",
+      "value": "Pool 1"
+    },
+    {
+      "name": "parentSuite",
+      "value": "All tests"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "ISSUE-1",
+      "type": "issue"
+    },
+    {
+      "name": "TMS-1",
+      "url": "TMS-1",
+      "type": "tms"
+    }
+  ],
+  "name": "Login_ValidData",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Login_ValidData",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e3d43f1114044881bec04d8915cae9db-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1540914891927,
+      "stop": 1540914903388
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1540914891927,
+  "stop": 1540914903388
+}

@@ -1,0 +1,61 @@
+{
+  "uuid": "5f6bdb12-eda0-4c60-8cb3-18ff2576ffe2-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_InvalidPassword",
+  "children": [
+    "d15a7fbe-086a-4a61-aa39-d43d2fa0ebf7-tr-0-1002"
+  ],
+  "befores": [
+    {
+      "name": "oneTimeSetup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914891903,
+      "stop": 1540914891903
+    }
+  ],
+  "afters": [
+    {
+      "name": "tearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914891903,
+      "stop": 1540914891903
+    },
+    {
+      "name": "oneTimeTearDown",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914891903,
+      "stop": 1540914891903
+    }
+  ],
+  "links": [],
+  "start": 1540914888571,
+  "stop": 1540914891922
+}

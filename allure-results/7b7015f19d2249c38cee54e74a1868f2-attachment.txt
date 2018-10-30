@@ -1,0 +1,13 @@
+[30.10.2018 17:54:49][Success]Navigated to URL: https://yandex.by/
+[30.10.2018 17:54:49][Success]Element is found: By.CssSelector: a.desk-notif-card__login-enter-expanded
+[30.10.2018 17:54:50][Success]Element is clicked: Element (id = 0.24301919374412617-1)
+[30.10.2018 17:54:50][Success]Element is found: By.Name: passwd
+[30.10.2018 17:54:50][Success]Element is found: By.Name: login
+[30.10.2018 17:54:50][Success]Element value is changed: 
+[30.10.2018 17:54:50][Success]Element value is changed: AutotestUser
+[30.10.2018 17:54:50][Success]Element is found: By.Name: passwd
+[30.10.2018 17:54:50][Success]Element value is changed: 
+[30.10.2018 17:54:50][Success]Element value is changed: NoAutotestUser123
+[30.10.2018 17:54:50][Success]Element is found: By.CssSelector: button.passport-Button
+[30.10.2018 17:54:51][Success]Element is clicked: Element (id = 0.8484880079443369-3)
+[30.10.2018 17:54:51][Success]Element is found: By.XPath: //*[@id='root']/div/div[2]/div[1]/div[1]

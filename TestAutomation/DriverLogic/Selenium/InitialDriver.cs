@@ -19,6 +19,7 @@ namespace TestAutomation.DriverLogic.Selenium
                 return waiter.wait;
             }
         }
+        private static Logger logger;
         public EventFiringWebDriver getInstance()
         {           
             if (driver == null)
@@ -48,6 +49,8 @@ namespace TestAutomation.DriverLogic.Selenium
                         }
                         waiter = new Waiter(driver, configs.timeouts);
                         registerListener(waiter);
+                        logger = new Logger();
+                        registerListener(logger);
                         return driver;
                     }
                 }

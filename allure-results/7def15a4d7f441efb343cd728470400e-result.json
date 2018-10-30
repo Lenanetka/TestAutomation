@@ -1,0 +1,94 @@
+{
+  "uuid": "c5a00b57-5604-4410-afe9-cd012f9c0a04-tr-0-1005",
+  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.ChangeLanguage_English",
+  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.ChangeLanguage_English",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-C865P7Q"
+    },
+    {
+      "name": "testClass",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "testMethod",
+      "value": "ChangeLanguage_English"
+    },
+    {
+      "name": "package",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "suite",
+      "value": "Yandex"
+    },
+    {
+      "name": "subSuite",
+      "value": "Pool 1"
+    },
+    {
+      "name": "parentSuite",
+      "value": "All tests"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-5",
+      "url": "ISSUE-5",
+      "type": "issue"
+    },
+    {
+      "name": "TMS-5",
+      "url": "TMS-5",
+      "type": "tms"
+    }
+  ],
+  "name": "ChangeLanguage_English",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: String matching \"Eng\"\r\n  But was:  \"Rus\"\r\n",
+    "trace": "   в TestAutomation.Pages.Yandex.Main.changeLanguage(String lang) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Main.cs:строка 83\r\n   в TestAutomation.Pages.Yandex.Main.Test_ChangeLanguageToEnglish() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Main.cs:строка 107\r\n   в TestAutomation.NUnitTests.YandexPoolOfTests1.ChangeLanguage_English() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\NUnitTests\\YandexPoolOfTests1.cs:строка 53\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ChangeLanguage_English",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: String matching \"Eng\"\r\n  But was:  \"Rus\"\r\n",
+        "trace": "   в TestAutomation.Pages.Yandex.Main.changeLanguage(String lang) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Main.cs:строка 83\r\n   в TestAutomation.Pages.Yandex.Main.Test_ChangeLanguageToEnglish() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Main.cs:строка 107\r\n   в TestAutomation.NUnitTests.YandexPoolOfTests1.ChangeLanguage_English() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\NUnitTests\\YandexPoolOfTests1.cs:строка 53\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "cce765b797ce41f187325fdf35e66eab-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1540914012551,
+      "stop": 1540914036254
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1540914012551,
+  "stop": 1540914036263
+}

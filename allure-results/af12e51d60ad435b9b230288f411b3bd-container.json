@@ -1,0 +1,44 @@
+{
+  "uuid": "7e68c0de-f88a-4c79-918a-4d324f256cb1-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.Logout",
+  "children": [
+    "50d483a3-f0be-4375-9bc8-1c8adf6442a7-tr-0-1006"
+  ],
+  "befores": [
+    {
+      "name": "OneTimeSetup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914060834,
+      "stop": 1540914060834
+    }
+  ],
+  "afters": [
+    {
+      "name": "tearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914060834,
+      "stop": 1540914060834
+    }
+  ],
+  "links": [],
+  "start": 1540914053765,
+  "stop": 1540914060863
+}

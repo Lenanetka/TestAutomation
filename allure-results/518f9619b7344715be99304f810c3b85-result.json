@@ -1,0 +1,94 @@
+{
+  "uuid": "ca0071c3-93b6-4de9-9621-4c614d93e794-tr-0-1006",
+  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.Logout",
+  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.Logout",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-C865P7Q"
+    },
+    {
+      "name": "testClass",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "testMethod",
+      "value": "Logout"
+    },
+    {
+      "name": "package",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Yandex"
+    },
+    {
+      "name": "subSuite",
+      "value": "Pool 1"
+    },
+    {
+      "name": "parentSuite",
+      "value": "All tests"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-6",
+      "url": "ISSUE-6",
+      "type": "issue"
+    },
+    {
+      "name": "TMS-6",
+      "url": "TMS-6",
+      "type": "tms"
+    }
+  ],
+  "name": "Logout",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 5 seconds",
+    "trace": "   в OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   в OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   в TestAutomation.DriverLogic.Selenium.Elements.Element.waitUntilIsClickable(By locator) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\DriverLogic\\Selenium\\Elements\\Element.cs:строка 19\r\n   в TestAutomation.DriverLogic.Selenium.Elements.Field.input(By locator, String input) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\DriverLogic\\Selenium\\Elements\\Field.cs:строка 12\r\n   в TestAutomation.Pages.Yandex.Login.loginFullForm(String name, String password) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 33\r\n   в TestAutomation.Pages.Yandex.Login.login(String name, String password) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 48\r\n   в TestAutomation.Pages.Yandex.Login.loginSuccess() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 52\r\n   в TestAutomation.Pages.Yandex.Mail.Test_Logout() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Mail.cs:строка 37\r\n   в TestAutomation.NUnitTests.YandexPoolOfTests1.Logout() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\NUnitTests\\YandexPoolOfTests1.cs:строка 61"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Logout",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 5 seconds",
+        "trace": "   в OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   в OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   в TestAutomation.DriverLogic.Selenium.Elements.Element.waitUntilIsClickable(By locator) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\DriverLogic\\Selenium\\Elements\\Element.cs:строка 19\r\n   в TestAutomation.DriverLogic.Selenium.Elements.Field.input(By locator, String input) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\DriverLogic\\Selenium\\Elements\\Field.cs:строка 12\r\n   в TestAutomation.Pages.Yandex.Login.loginFullForm(String name, String password) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 33\r\n   в TestAutomation.Pages.Yandex.Login.login(String name, String password) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 48\r\n   в TestAutomation.Pages.Yandex.Login.loginSuccess() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 52\r\n   в TestAutomation.Pages.Yandex.Mail.Test_Logout() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Mail.cs:строка 37\r\n   в TestAutomation.NUnitTests.YandexPoolOfTests1.Logout() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\NUnitTests\\YandexPoolOfTests1.cs:строка 61"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "99f89a5c70ef4960b9a75704aed3e779-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1540914903418,
+      "stop": 1540914911902
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1540914903418,
+  "stop": 1540914911903
+}

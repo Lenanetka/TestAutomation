@@ -1,0 +1,44 @@
+{
+  "uuid": "46ef577b-3076-4fe7-b0fb-85c2536eb216-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.ChangeLanguage_English",
+  "children": [
+    "c5a00b57-5604-4410-afe9-cd012f9c0a04-tr-0-1005"
+  ],
+  "befores": [
+    {
+      "name": "OneTimeSetup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914036221,
+      "stop": 1540914036221
+    }
+  ],
+  "afters": [
+    {
+      "name": "tearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914036224,
+      "stop": 1540914036224
+    }
+  ],
+  "links": [],
+  "start": 1540914012551,
+  "stop": 1540914036352
+}

@@ -1,0 +1,14 @@
+[30.10.2018 17:41:01][Success]Navigated to URL: https://yandex.by/
+[30.10.2018 17:41:01][Success]Element is found: By.XPath: //a[@data-statlog='tabs.video' and @data-id='video']
+[30.10.2018 17:41:07][Success]Element is clicked: Element (id = 0.7430745565718349-1)
+[30.10.2018 17:41:07][Success]Element is found: By.XPath: //a[@data-statlog='tabs.images' and @data-id='images']
+[30.10.2018 17:41:10][Success]Element is clicked: Element (id = 0.5633189860685486-1)
+[30.10.2018 17:41:11][Success]Element is found: By.XPath: //a[@data-statlog='tabs.news' and @data-id='news']
+[30.10.2018 17:41:14][Success]Element is clicked: Element (id = 0.6749528607085251-1)
+[30.10.2018 17:41:15][Success]Element is found: By.XPath: //a[@data-statlog='tabs.market' and @data-id='market']
+[30.10.2018 17:41:21][Success]Element is clicked: Element (id = 0.15873299249524808-1)
+[30.10.2018 17:41:22][Success]Element is found: By.XPath: //a[@data-statlog='tabs.maps' and @data-id='maps']
+[30.10.2018 17:41:26][Success]Element is clicked: Element (id = 0.7781850872002656-1)
+[30.10.2018 17:41:26][Fail]Exception: unknown error: jQuery is not defined
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.17134 x86_64)

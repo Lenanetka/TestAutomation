@@ -1,0 +1,61 @@
+{
+  "uuid": "f2368bb9-d46c-420e-96ea-7bc95db119c0-tc-0-1000",
+  "name": "TestAutomation.NUnitTests.YandexPoolOfTests1.ChangeLanguage_English",
+  "children": [
+    "60bd5bae-5eaa-431d-8034-77780fb1d4be-tr-0-1005"
+  ],
+  "befores": [
+    {
+      "name": "oneTimeSetup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914882897,
+      "stop": 1540914882897
+    }
+  ],
+  "afters": [
+    {
+      "name": "tearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914882898,
+      "stop": 1540914882898
+    },
+    {
+      "name": "oneTimeTearDown",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1540914882898,
+      "stop": 1540914882898
+    }
+  ],
+  "links": [],
+  "start": 1540914818553,
+  "stop": 1540914883027
+}

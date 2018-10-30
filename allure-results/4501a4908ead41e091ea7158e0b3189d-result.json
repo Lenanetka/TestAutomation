@@ -1,0 +1,94 @@
+{
+  "uuid": "00e2ffd2-4ceb-47b9-ab36-3d678497c228-tr-0-1002",
+  "historyId": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_InvalidPassword",
+  "fullName": "TestAutomation.NUnitTests.YandexPoolOfTests1.Login_InvalidPassword",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-C865P7Q"
+    },
+    {
+      "name": "testClass",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "testMethod",
+      "value": "Login_InvalidPassword"
+    },
+    {
+      "name": "package",
+      "value": "TestAutomation.NUnitTests.YandexPoolOfTests1"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "suite",
+      "value": "Yandex"
+    },
+    {
+      "name": "subSuite",
+      "value": "Pool 1"
+    },
+    {
+      "name": "parentSuite",
+      "value": "All tests"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-2",
+      "url": "ISSUE-2",
+      "type": "issue"
+    },
+    {
+      "name": "TMS-2",
+      "url": "TMS-2",
+      "type": "tms"
+    }
+  ],
+  "name": "Login_InvalidPassword",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 15 but was 18. Strings differ at index 0.\r\n  Expected: \"Неверный пароль\"\r\n  But was:  \"Incorrect password\"\r\n  -----------^\r\n",
+    "trace": "   в TestAutomation.Pages.Yandex.Login.loginError(String name, String password, String expectedErrorMessage) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 57\r\n   в TestAutomation.Pages.Yandex.Login.Test_Login_InvalidPassword() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 80\r\n   в TestAutomation.NUnitTests.YandexPoolOfTests1.Login_InvalidPassword() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\NUnitTests\\YandexPoolOfTests1.cs:строка 29\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Login_InvalidPassword",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 15 but was 18. Strings differ at index 0.\r\n  Expected: \"Неверный пароль\"\r\n  But was:  \"Incorrect password\"\r\n  -----------^\r\n",
+        "trace": "   в TestAutomation.Pages.Yandex.Login.loginError(String name, String password, String expectedErrorMessage) в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 57\r\n   в TestAutomation.Pages.Yandex.Login.Test_Login_InvalidPassword() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\Pages\\Yandex\\Login.cs:строка 80\r\n   в TestAutomation.NUnitTests.YandexPoolOfTests1.Login_InvalidPassword() в C:\\Users\\Andersen\\Documents\\Visual Studio 2017\\Projects\\TestAutomation\\TestAutomation\\NUnitTests\\YandexPoolOfTests1.cs:строка 29\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "70d1eff8723a4e6d951251d92dc490a0-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1540914040881,
+      "stop": 1540914043892
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1540914040881,
+  "stop": 1540914043893
+}
