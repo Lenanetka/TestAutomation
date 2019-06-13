@@ -7,11 +7,11 @@ namespace TestAutomation.DriverLogic.Selenium.Listeners
     {
         public void log(bool positive, string action, string message)
         {
-            Console.WriteLine(String.Format("[{0:d/M/yyyy HH:mm:ss}][{1}]{2}: {3}", DateTime.Now, positive ? "Success" : "Fail",action, message));           
+            Console.WriteLine(String.Format("[{0:d/M/yyyy HH:mm:ss}][{1}]{2}: {3}", DateTime.Now, positive ? "INFO" : "WARN", action, message));           
         }
         public void log(bool positive, string action)
         {
-            Console.WriteLine(String.Format("[{0:d/M/yyyy HH:mm:ss}][{1}]{2}", DateTime.Now, positive ? "Success" : "Fail", action));
+            Console.WriteLine(String.Format("[{0:d/M/yyyy HH:mm:ss}][{1}]{2}", DateTime.Now, positive ? "INFO" : "WARN", action));
         }
         public override void throwExeption(object sender, WebDriverExceptionEventArgs e)
         {
