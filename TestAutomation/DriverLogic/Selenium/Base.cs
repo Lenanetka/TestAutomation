@@ -23,7 +23,9 @@ namespace TestAutomation.DriverLogic.Selenium
         }
         public void waitUntilScriptsFinished()
         {
-            wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (document.readyState == 'complete' && jQuery.active == 0)"));
+            wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (document.readyState == 'complete')"));
+            if ((bool)((IJavaScriptExecutor)driver).ExecuteScript("return window.jQuery != undefined"))
+                wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (jQuery.active == 0)"));
         }
     }
 }

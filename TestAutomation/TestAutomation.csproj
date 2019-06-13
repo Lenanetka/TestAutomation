@@ -75,8 +75,11 @@
     <Compile Include="DriverLogic\Selenium\Elements\Browser.cs" />
     <Compile Include="DriverLogic\Selenium\WebDriverOptions.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Element.cs" />
+    <Compile Include="NUnitTests\Pages\Google\Main.cs" />
+    <Compile Include="NUnitTests\Pages\Google\Search.cs" />
     <Compile Include="NUnitTests\TestBase.cs" />
     <Compile Include="NUnitTests\YandexPoolOfTests1.cs" />
+    <Compile Include="NUnitTests\GooglePoolOfTests1.cs" />
     <Compile Include="NUnitTests\YandexPoolOfTests2.cs" />
     <Compile Include="NUnitTests\Pages\Yandex\ComparisonList.cs" />
     <Compile Include="NUnitTests\Pages\Yandex\Images.cs" />

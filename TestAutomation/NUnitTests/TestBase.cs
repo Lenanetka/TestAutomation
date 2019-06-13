@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System.Management.Automation;
 using System;
 using System.Threading;
 

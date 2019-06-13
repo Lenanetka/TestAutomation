@@ -53,10 +53,6 @@ d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug
 d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\TechTalk.SpecFlow.dll
 d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\CsvHelper.xml
 d:\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\MimeTypesMap.dll
 C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\System.ValueTuple.dll
-C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\System.Management.Automation.dll
-C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\Microsoft.Management.Infrastructure.dll
-C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\System.Management.Automation.xml
 C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\Andersen\Documents\Visual Studio 2017\Projects\TestAutomation\TestAutomation\bin\Debug\System.ValueTuple.xml
