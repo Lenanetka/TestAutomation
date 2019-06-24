@@ -10,6 +10,7 @@ namespace TestAutomation.Pages
         protected Field field = new Field();
         protected Mouse mouse = new Mouse();
         protected JSExecuter jSExecuter = new JSExecuter();
+        protected Screen screen = new Screen();
         public PageMap()
         {   
         }  

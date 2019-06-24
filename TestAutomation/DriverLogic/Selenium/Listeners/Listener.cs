@@ -19,5 +19,6 @@ namespace TestAutomation.DriverLogic.Selenium.Listeners
         public virtual void navigatedForward(object sender, WebDriverNavigationEventArgs e) { }
         public virtual void scriptExecuting(object sender, WebDriverScriptEventArgs e) { }
         public virtual void scriptExecuted(object sender, WebDriverScriptEventArgs e) { }
+        public virtual void getScreenshot (string path) { }
     }
 }

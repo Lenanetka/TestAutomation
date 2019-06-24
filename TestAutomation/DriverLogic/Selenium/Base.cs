@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
+using System;
 using TestAutomation.DriverLogic.Selenium.Listeners;
 
 namespace TestAutomation.DriverLogic.Selenium
@@ -26,6 +27,12 @@ namespace TestAutomation.DriverLogic.Selenium
             wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (document.readyState == 'complete')"));
             if ((bool)((IJavaScriptExecutor)driver).ExecuteScript("return window.jQuery != undefined"))
                 wait.Until(wd => ((IJavaScriptExecutor)wd).ExecuteScript("return (jQuery.active == 0)"));
+        }       
+        public void getScreenshot(string path)
+        {
+            Screenshot screentshot = driver.GetScreenshot();
+            screentshot.SaveAsFile(path);
+            //initializer.OnSavingScreenshot(path);
         }
     }
 }

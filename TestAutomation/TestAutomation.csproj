@@ -98,6 +98,7 @@
     <Compile Include="DriverLogic\Selenium\Elements\Field.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\JSExecuter.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Mouse.cs" />
+    <Compile Include="DriverLogic\Selenium\Elements\Screen.cs" />
     <Compile Include="DriverLogic\Selenium\WebDriverManager.cs" />
     <Compile Include="DriverLogic\Selenium\Elements\Browser.cs" />
     <Compile Include="DriverLogic\Selenium\WebDriverOptions.cs" />

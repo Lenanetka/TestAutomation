@@ -34,5 +34,9 @@ namespace TestAutomation.DriverLogic.Selenium.Listeners
         {
             log(true, "Navigated to URL", e.Url.ToString());
         }
+        public override void getScreenshot(string path)
+        {
+            log(true, "Saving screenshot", path);
+        }
     }
 }

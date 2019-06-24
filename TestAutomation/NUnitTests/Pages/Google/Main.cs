@@ -20,8 +20,7 @@ namespace TestAutomation.Pages.Google
         public void search(string text)
         {
             field.input(SearchField, text);
-            button.click(SearchButton);
-            StringAssert.StartsWith(Search.url, browser.getCurrentUrl());
+            button.click(SearchButton);          
         }
         #endregion
         #region tests
@@ -29,6 +28,8 @@ namespace TestAutomation.Pages.Google
         {
             browser.navigate(url);
             search("cat");
+            screen.savePicture("test.png");
+            StringAssert.StartsWith(Search.url, browser.getCurrentUrl());
         }
         #endregion
     }

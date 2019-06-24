@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Support.Events;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.IO;
@@ -65,7 +66,9 @@ namespace TestAutomation.DriverLogic.Selenium
                 driver = null;
                 waiter = null;
             }
-        }       
+        }
+        public delegate void SavingScreenshotHandler(string path);
+        public event SavingScreenshotHandler OnSavingScreenshot;
         private void registerListener(Listener listener)
         {
             driver.ElementClicking += listener.elementClicking;
@@ -83,6 +86,7 @@ namespace TestAutomation.DriverLogic.Selenium
             driver.ScriptExecuting += listener.scriptExecuting;
             driver.ScriptExecuted += listener.scriptExecuted;
             driver.ExceptionThrown += listener.throwExeption;
+            OnSavingScreenshot += listener.getScreenshot;
         }
     }
 }

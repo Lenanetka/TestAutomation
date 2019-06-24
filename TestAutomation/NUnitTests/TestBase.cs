@@ -11,7 +11,6 @@ namespace TestAutomation.NUnitTests
         [OneTimeSetUp]
         public void oneTimeSetup()
         {
-
         }
         [OneTimeTearDown]
         protected void oneTimeTearDown()
